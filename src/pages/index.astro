@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro'
 import { event } from '../utils/contants'
 import { Image } from 'astro:assets'
 import imagenes from '../assets/imagenes.png'
+import berenice from '../assets/berenice_portrait.png'
 ---
 
 <Layout title="MasterClass">
@@ -14,12 +15,13 @@ import imagenes from '../assets/imagenes.png'
 			</h1>
 			<div class="flex">
 				<div>
-					<img
-						src="berenice_portrait.png"
+					<Image
+						src={berenice}
 						alt="berenice"
 						height="600"
 						width="300"
 						class="hidden md:flex"
+						loading="lazy" 
 					/>
 				</div>
 				<div class="mx-4 flex w-full flex-col justify-around md:mx-0">
@@ -69,12 +71,13 @@ import imagenes from '../assets/imagenes.png'
 				{
 					event.map((item) => (
 						<div class="flex flex-col items-center gap-4 py-4 md:py-0">
-							<img
+							<Image
 								src={item.image}
 								alt={item.image}
 								height={item.heigth}
 								width={item.width}
-								class="md:h-56   "
+								class="md:h-56"
+								loading="lazy"
 							/>
 							<hr class="w-200 my-6 w-3/4 border-t-2 border-pink-500" />
 							<div>
