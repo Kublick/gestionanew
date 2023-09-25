@@ -18,10 +18,10 @@ import berenice from '../assets/berenice_portrait.png'
 					<Image
 						src={berenice}
 						alt="berenice"
-						height="600"
-						width="300"
+						height={berenice.height}
+						width={berenice.width}
 						class="hidden md:flex"
-						loading="lazy" 
+						loading="lazy"
 					/>
 				</div>
 				<div class="mx-4 flex w-full flex-col justify-around md:mx-0">
@@ -73,9 +73,9 @@ import berenice from '../assets/berenice_portrait.png'
 						<div class="flex flex-col items-center gap-4 py-4 md:py-0">
 							<Image
 								src={item.image}
-								alt={item.image}
-								height={item.heigth}
-								width={item.width}
+								alt={item.id.toString()}
+								height={item.image.width}
+								width={item.image.height}
 								class="md:h-56"
 								loading="lazy"
 							/>
