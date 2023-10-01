@@ -1,11 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '../../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import berenice from '../../assets/landing_berenice_left.png'
 ---
+
+<script>
+	document.getElementById('button')?.addEventListener('click', () => {
+		window.open('https://chat.whatsapp.com/JOnZoxuheDF0xGiih6uhDj', '_blank')
+	})
+</script>
 
 <Layout title="Gracias">
 	<main class="container mx-auto mt-12">
 		<section class="grid md:grid-cols-3">
-			<div>imagen</div>
+			<div>
+				<Image src={berenice} alt="Berenice" class="scale-x-[-1]" />
+			</div>
 
 			<div class="col-span-2">
 				<h1 class="text-center text-xl text-pink-400 md:text-4xl">
@@ -32,7 +42,10 @@ import Layout from '../layouts/Layout.astro'
 					</li>
 				</ul>
 				<div class="flex flex-col items-center py-4">
-					<button class="rounded-lg bg-pink-600 px-4 py-2 text-lg font-semibold text-white">
+					<button
+						id="button"
+						class="rounded-lg bg-pink-600 px-4 py-2 text-lg font-semibold text-white"
+					>
 						Da click en el botón y ve al grupo
 					</button>
 					<p class="mt-2 text-xs">Da click en el botón para registrarte</p>
