@@ -33,29 +33,93 @@ const menuItems = [
 ---
 
 <nav class="fixed start-0 top-0 z-20 w-full bg-white">
-	<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
-		<a href="#">
-			<Image src={logotipo} alt="logotipo" width={200} height={200} />
-		</a>
+	<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-2 md:p-4">
+		<Image src={logotipo} alt="logotipo" width={101} height={31} />
 
-		<div class="hidden w-full items-center justify-between md:flex md:w-auto">
+		<div
+			id="menu"
+			class="hidden w-full flex-col items-start justify-between md:hidden md:w-auto md:flex-row"
+		>
 			{
 				menuItems.map((item) => (
 					<a
 						href={item.path}
-						class="font-sm px-4 py-2 text-sm font-light text-gray-700 hover:text-gray-500"
+						class="font-sm w-full px-4 py-2 text-sm font-light text-gray-700  hover:bg-primary"
 					>
 						{item.name}
 					</a>
 				))
 			}
+			<div class="my-4 ml-2 md:my-0 md:ml-0">
+				<a
+					href="https://api.whatsapp.com/message/LD54V7JCH3TXD1"
+					class="flex items-center gap-2 rounded-lg bg-whatsapp p-2 shadow-lg hover:bg-green-400"
+				>
+					<WhatsLogo />
+
+					<span class="text-sm text-white"> +52 (686) 234 - 9366</span>
+				</a>
+			</div>
 		</div>
-		<a
-			href="https://api.whatsapp.com/message/LD54V7JCH3TXD1"
-			class="flex items-center gap-2 rounded-lg bg-whatsapp p-2 shadow-lg hover:bg-green-400"
-		>
-			<WhatsLogo />
-			<span class="text-sm text-white"> +52 (686) 234 - 9366</span>
-		</a>
+
+		<button id="hamburger" class="absolute right-0 top-0 m-4 md:hidden">
+			<svg
+				id="hamburger-icon"
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+				class="h-6 w-6"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M4 6h16M4 12h16M4 18h16"></path>
+			</svg>
+			<svg
+				id="close-icon"
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+				class="hidden h-6 w-6"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M6 18L18 6M6 6l12 12"></path>
+			</svg>
+		</button>
 	</div>
 </nav>
+
+<script>
+	window.addEventListener('load', function () {
+		const hamburger = document.getElementById('hamburger')
+		const hamburgerIcon = document.getElementById('hamburger-icon')
+		const closeIcon = document.getElementById('close-icon')
+		const menu = document.getElementById('menu')
+		const menuItems = Array.from(document.querySelectorAll('#menu a'))
+
+		hamburger.addEventListener('click', toggleMenu)
+
+		menuItems.forEach((item) => {
+			item.addEventListener('click', toggleMenu)
+		})
+
+		function toggleMenu() {
+			if (menu.classList.contains('hidden')) {
+				menu.classList.remove('hidden')
+				menu.classList.add('flex')
+			} else {
+				menu.classList.add('hidden')
+				menu.classList.remove('flex')
+			}
+
+			hamburgerIcon.classList.toggle('hidden')
+			closeIcon.classList.toggle('hidden')
+		}
+	})
+</script>
