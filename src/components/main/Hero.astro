@@ -1,0 +1,44 @@
+---
+import HeroBackground from '../../assets/imagen_inicio.png'
+import { Image } from 'astro:assets'
+import LogoInicio from '../../assets/logo_inicio.png'
+import ImagenBere from '../../assets/imagen_1.png'
+---
+
+<section
+	id="hero-section"
+	class="mx-auto bg-cover bg-center py-1"
+	style={`background-image: url('${HeroBackground.src}'); height: ${HeroBackground.height}px; width: 100%;`}
+>
+	<div class="flex justify-center py-20">
+		<Image
+			src={LogoInicio}
+			alt="Logo"
+			height={LogoInicio.height / 1.25}
+			width={LogoInicio.width / 1.25}
+		/>
+	</div>
+	<div class="mx-4 flex justify-center bg-white px-10 pt-10 shadow-xl">
+		<div class="flex flex-col items-center justify-around gap-8 text-center">
+			<div class="text-4xl">
+				<h1>¿QUIERES MANDAR</h1>
+				<h1>
+					TODO A LA <span class="text-primary">CH!@#$%?</span>
+				</h1>
+			</div>
+			<p>
+				En eso yo te puedo ayudar, esto te va a interesar hoy tengo para ti una sesión informativa
+				de terapia psicológica que te quiero regalar, solo debes enviarme un mensaje haciendo click
+				en este botón
+			</p>
+			<div>
+				<a
+					class="mb-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white hover:bg-purple-400 focus:outline-none focus:ring-4 focus:ring-purple-300"
+				>
+					¡Quiero mi sessión!
+				</a>
+			</div>
+			<Image src={ImagenBere} alt="Bere" height={ImagenBere.height} width={ImagenBere.width} />
+		</div>
+	</div>
+</section>
