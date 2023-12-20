@@ -12,7 +12,7 @@ module.exports = {
 			fontFamily: {
 				bebas: ['Bebas Neue', 'sans-serif'],
 				montserrat: ['Montserrat', 'serif'],
-				'montserrat-italic': ['Montserrat Italic', 'serif']
+				mitalic: ['Montserrat Italic', 'serif']
 			},
 			backgroundImage: {
 				'hero-image': "url('/imagen_inicio.png')"
