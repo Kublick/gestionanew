@@ -34,17 +34,17 @@ const menuItems = [
 
 <nav class="fixed start-0 top-0 z-20 w-full bg-white">
 	<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-2 md:p-4">
-		<Image src={logotipo} alt="logotipo" width={101} height={31} />
+		<Image src={logotipo} alt="logotipo" width={101} height={31} class="md:h-[51] md:w-[169px]" />
 
 		<div
 			id="menu"
-			class="hidden w-full flex-col items-start justify-between md:hidden md:w-auto md:flex-row"
+			class="hidden w-full flex-col items-start justify-between md:flex md:w-auto md:flex-row"
 		>
 			{
 				menuItems.map((item) => (
 					<a
 						href={item.path}
-						class="font-sm w-full px-4 py-2 text-sm font-light text-gray-700  hover:bg-primary"
+						class="font-sm w-full whitespace-nowrap px-4 py-2 text-sm font-light text-gray-700  hover:bg-primary"
 					>
 						{item.name}
 					</a>
@@ -53,7 +53,7 @@ const menuItems = [
 			<div class="my-4 ml-2 md:my-0 md:ml-0">
 				<a
 					href="https://api.whatsapp.com/message/LD54V7JCH3TXD1"
-					class="flex items-center gap-2 rounded-lg bg-whatsapp p-2 shadow-lg hover:bg-green-400"
+					class="flex items-center gap-2 whitespace-nowrap rounded-lg bg-whatsapp p-2 shadow-lg hover:bg-green-400"
 				>
 					<WhatsLogo />
 
@@ -97,11 +97,11 @@ const menuItems = [
 
 <script>
 	window.addEventListener('load', function () {
-		const hamburger = document.getElementById('hamburger')
-		const hamburgerIcon = document.getElementById('hamburger-icon')
-		const closeIcon = document.getElementById('close-icon')
-		const menu = document.getElementById('menu')
-		const menuItems = Array.from(document.querySelectorAll('#menu a'))
+		const hamburger = document.getElementById('hamburger') as HTMLElement
+		const hamburgerIcon = document.getElementById('hamburger-icon') as HTMLElement
+		const closeIcon = document.getElementById('close-icon') as HTMLElement
+		const menu = document.getElementById('menu') as HTMLElement
+		const menuItems = Array.from(document.querySelectorAll('#menu a')) as HTMLElement[]
 
 		hamburger.addEventListener('click', toggleMenu)
 

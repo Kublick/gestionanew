@@ -1,0 +1,211 @@
+<script>
+	import BlazeSlider from 'blaze-slider'
+	import 'blaze-slider/dist/blaze.css'
+
+	let currentSlide = 0
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const el = document.querySelector('.blaze-slider')
+
+		const slider = new BlazeSlider(el as HTMLElement, {
+			all: {}
+		})
+		const unsub = slider.onSlide((pageIndex, firstVisibleSlideIndex, lastVisibleSlideIndex) => {
+			currentSlide = pageIndex
+			document.querySelectorAll('.blaze-dots span').forEach((dot, index) => {
+				dot.classList.toggle('active', index === currentSlide)
+			})
+		})
+	})
+
+	document.querySelectorAll('.blaze-dots span').forEach((dot, index) => {
+		dot.classList.toggle('active', index === currentSlide)
+	})
+</script>
+
+<section id="testimonios" class="flex flex-col items-center bg-[#F9F8F3] py-10">
+	<h1 class="mb-7 text-center text-2xl tracking-wide">TESTIMONIOS</h1>
+	<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none">
+		<path d="M0 2H249" stroke="#6D8C82" stroke-width="3"></path>
+	</svg>
+	<div class="px-10 py-7 leading-7">
+		<p class="text-center leading-snug text-neutral-700">
+			Historias inspiradoras, los casos de éxito que ya tomaron acción
+		</p>
+		<h2 class="mt-7 text-center font-semibold text-primary">¿Serás el próximo?</h2>
+	</div>
+
+	<div class="blaze-slider">
+		<div class="blaze-container">
+			<div class="blaze-track-container">
+				<div class="blaze-track">
+					<div>
+						<div class="flex flex-col rounded-3xl border-2 bg-white p-8 shadow-xl">
+							<p class="text-lg">Alejandro</p>
+							<p class="mt-6 text-sm">
+								Me ayudó a superar mi ansiedad social. Ahora puedo hablar en público sin temores
+							</p>
+						</div>
+					</div>
+					<div>
+						<div class="flex flex-col rounded-3xl border-2 bg-white p-8 shadow-xl">
+							<p class="text-lg">Mayra</p>
+							<p class="mt-6 text-sm">
+								Me ayudó a entender mis problemas de pareja. Ahora tengo una relación más sana.
+							</p>
+						</div>
+					</div>
+					<div>
+						<div class="flex flex-col rounded-3xl border-2 bg-white p-8 shadow-xl">
+							<p class="text-lg">Sofia</p>
+							<p class="mt-6 text-sm">
+								Me ayudó a superar mi depresión. Ahora tengo una actitud más positiva ante la vida.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="blaze-prev">
+				<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#594b83" class="h-6 w-6">
+					<path
+						fill-rule="evenodd"
+						d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
+						clip-rule="evenodd"></path>
+				</svg> -->
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="36"
+					height="36"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="#594b83"
+					stroke-width="3"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"></path></svg
+				>
+			</button>
+			<button class="blaze-next">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="36"
+					height="36"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="#594b83"
+					stroke-width="3"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"></path></svg
+				>
+			</button>
+
+			<div class="blaze-dots">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.blaze-slider {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.blaze-container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+
+	.blaze-track-container {
+		display: flex;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.blaze-track {
+		display: flex;
+		transition: transform 0.3s ease-in-out;
+		width: 100%;
+	}
+
+	.blaze-track > div {
+		flex: 0 0 100%;
+		max-width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 50px;
+		box-sizing: border-box;
+		font-size: 2em;
+		background-color: transparent;
+		border: none;
+		text-align: center;
+	}
+
+	/* Mobile styles */
+	@media (max-width: 375px) {
+		.blaze-track > div {
+			flex: 0 0 80%;
+			max-width: 80%;
+			padding: 20px;
+			font-size: 1.5em;
+		}
+	}
+
+	@media (min-width: 376px) {
+		.blaze-track > div {
+			padding: 50px;
+			font-size: 2em;
+		}
+	}
+	.blaze-dots {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+	}
+
+	.blaze-dots span {
+		display: block;
+		width: 10px;
+		height: 10px;
+		margin: 0 5px;
+		background-color: transparent;
+		border: 2px solid #594b83ab;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	.blaze-dots span.active {
+		background-color: #594b83ab;
+		border: none;
+	}
+
+	.blaze-prev,
+	.blaze-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: #fff;
+		padding: 10px;
+		border-radius: 50%;
+	}
+
+	.blaze-prev {
+		left: 10px; /* Adjust as needed */
+		background-color: transparent;
+	}
+
+	.blaze-next {
+		right: 10px; /* Adjust as needed */
+		background-color: transparent;
+	}
+</style>

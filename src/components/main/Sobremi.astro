@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets'
+import Berenice from '../../assets/imagen_2.png'
+---
+
+<section id="sobremi" class="flex flex-col items-center py-10">
+	<h1 class="mb-7 bg-white text-center text-2xl tracking-wide">SOBRE MI</h1>
+	<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none">
+		<path d="M0 2H249" stroke="#B3A7D9" stroke-width="3"></path>
+	</svg>
+	<div class="px-10 py-7 leading-7 shadow-xl">
+		<h2 class="font-semibold text-accent">Psicologa Berenice Bastidas</h2>
+		<p class="text-neutral-700">Cédula Profesional 7438424</p>
+	</div>
+
+	<div class="mx-12 mb-8 mt-16 text-center">
+		<h2 class="mb-6 font-semibold text-primary">¿Por qué te puedo ayudar?</h2>
+		<p class="mb-6 text-xs">
+			Podría hablarte de mí pero siendo sinceros cuando empezamos un proceso terapéutico, la terapia
+			psicológica no trata de mí, si no de ti como paciente.
+		</p>
+		<p class="mt-2 text-xs">
+			Si te parece buena idea podemos conocernos, me gustaría <span
+				class="font-mitalic text-primary">mediante una llamada telefónica escucharte</span
+			> para saber cuál es la situación por la que estas pasando, conocerte y en caso de que pueda
+			ayudarte con mis conocimientos profesionales te lo hare saber y ofreceré un plan personalizado
+			de terapia si así lo eliges.
+		</p>
+	</div>
+
+	<Image src={Berenice} alt="Berenice Bastidas" height={277} width={234} class="mb-12" />
+
+	<div class="bg-sesion-image bg-cover bg-center pb-6">
+		<div class="text-center text-sm text-white">
+			<p class="mx-8 py-12 text-sm font-semibold leading-5">
+				Agenda tu primera sesión informativa de terapia sin costo enviando un mensaje de Whats app
+				directamente en este botón
+			</p>
+
+			<a
+				href="https://api.whatsapp.com/message/LD54V7JCH3TXD1"
+				target="_blank"
+				class="mx-auto rounded-xl bg-white px-4 py-2 font-semibold text-primary shadow-xl hover:bg-primary hover:text-white"
+				>Quiero agendar la sesión</a
+			>
+
+			<p class="py-12 text-sm font-semibold leading-5 text-white">
+				La llamada telefónica es breve dura aproximadamente 15 minutos
+			</p>
+		</div>
+	</div>
+</section>

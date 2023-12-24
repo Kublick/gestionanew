@@ -3,6 +3,9 @@ import Header from '../components/Header.astro'
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/main/Hero.astro'
 import Servicios from '../components/main/Servicios.astro'
+import Sobremi from '../components/main/Sobremi.astro'
+import Testimonios from '../components/main/Testimonios.astro'
+import Preguntas from '../components/main/Preguntas.astro'
 ---
 
 <!-- <script>
@@ -17,9 +20,12 @@ import Servicios from '../components/main/Servicios.astro'
 <Layout title="Terapia Psicologica">
 	<main class="overflow-visible">
 		<Header />
-		<div class="pt-[56px] md:mt-[117px]">
+		<div class="pt-[56px] md:mt-[56px]">
 			<Hero />
 			<Servicios />
+			<Sobremi />
+			<Testimonios />
+			<Preguntas />
 		</div>
 	</main>
 </Layout>

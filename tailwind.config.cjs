@@ -15,7 +15,8 @@ module.exports = {
 				mitalic: ['Montserrat Italic', 'serif']
 			},
 			backgroundImage: {
-				'hero-image': "url('/imagen_inicio.png')"
+				'hero-image': "url('/imagen_inicio.png')",
+				'sesion-image': "url('/imagen_sesion.png')"
 			}
 		}
 	},

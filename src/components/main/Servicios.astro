@@ -1,1 +1,71 @@
-<section id="servicios" class="mx-8 flex flex-col items-center py-24"></section>
+---
+import LogoServicio from '../../assets/logo_servicios.png'
+import { Image } from 'astro:assets'
+import LogoService1 from '../../assets/servicios_1.png'
+import LogoService2 from '../../assets/servicios_2.png'
+import LogoService3 from '../../assets/servicios_3.png'
+
+const serviceItems = [
+	{
+		title: 'Reclutamiento de Personal',
+		img: LogoService1
+	},
+	{
+		title: 'Desarrollo Personal, Cursos y Talleres',
+		img: LogoService2
+	},
+	{
+		title: 'Terapia Psicológica',
+		img: LogoService3
+	}
+]
+---
+
+<section id="servicios" class="triangle-top mt-[100px] bg-zinc-100">
+	<div class="flex flex-col items-center">
+		<Image src={LogoServicio} alt="Logo" height={47} width={47} class="md:hidden" />
+		<div class="pb-10 pt-5">
+			<h1 class="mb-7 text-center text-2xl tracking-wide">SERVICIOS</h1>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="249"
+				height="4"
+				viewBox="0 0 249 4"
+				fill="none"
+			>
+				<path d="M0 2H249" stroke="#6D8C82" stroke-width="3"></path>
+			</svg>
+		</div>
+		<div class="flex flex-grow flex-wrap justify-center gap-7 pb-20">
+			{
+				serviceItems.map((item) => (
+					<div class="flex flex-col items-center justify-center">
+						<Image src={item.img} alt="logo" width={78} height={78} class="z-10 translate-y-10" />
+						<div class="flex h-[144px] w-[155px] items-center justify-center px-3 text-center text-sm shadow-xl">
+							<p>{item.title}</p>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<style>
+	#servicios.triangle-top {
+		position: relative;
+	}
+	#servicios.triangle-top::before {
+		content: '';
+		position: absolute;
+		top: -75px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		width: 0;
+		height: 0;
+		border-left: 50vw solid transparent; /* Use viewport units to make the triangle responsive */
+		border-right: 50vw solid transparent; /* Use viewport units to make the triangle responsive */
+		border-bottom: 75px solid #f2f2f2;
+	}
+</style>
