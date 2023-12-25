@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets'
-import logotipo from '../assets/logotipo_purple.png'
+import logotipo from '../assets/logo_menu.svg'
 import WhatsLogo from '../assets/Whatslogo.astro'
 
 const menuItems = [
@@ -32,9 +32,11 @@ const menuItems = [
 ]
 ---
 
-<nav class="fixed start-0 top-0 z-20 w-full bg-white">
+<nav class="fixed start-0 top-0 z-20 w-full bg-white shadow-lg">
 	<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-2 md:p-4">
-		<Image src={logotipo} alt="logotipo" width={101} height={31} class="md:h-[51] md:w-[169px]" />
+		<div class="pl-6">
+			<Image src={logotipo} alt="logotipo" width={101} height={31} class="md:h-[51] md:w-[169px]" />
+		</div>
 
 		<div
 			id="menu"

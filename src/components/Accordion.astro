@@ -1,0 +1,108 @@
+---
+interface Props {
+	title: string
+	details: string
+}
+
+const { title, details } = Astro.props as Props
+---
+
+<script>
+	// const action = document.querySelectorAll('.accordion__button')
+
+	// action.forEach((item) => {
+	// 	item.addEventListener('click', (event) => {
+	// 		const target = event.target as HTMLElement
+	// 		const parent = target.parentElement as HTMLElement
+	// 		const content = parent.nextElementSibling as HTMLElement
+	// 		const isOpen = parent.getAttribute('aria-expanded') === 'true'
+	// 		parent.setAttribute('aria-expanded', String(!isOpen))
+	// 		console.log('content', content)
+	// 	})
+	// })
+</script>
+
+<div class="accordion group relative rounded-lg border border-accent">
+	<button
+		class="accordion__button flex w-full flex-1 items-center justify-between gap-2 p-3 text-left transition sm:px-4"
+		type="button"
+		id={`${title} accordion menu button`}
+		aria-expanded="false"
+		aria-controls={`${title} accordion menu content`}
+	>
+		{title}
+		<svg
+			class="accordion__chevron h-7 w-7 shrink-0 transition-transform"
+			aria-hidden="true"
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			><path
+				fill="none"
+				stroke="#6D8C82"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="3"
+				d="m6 9l6 6l6-6"></path></svg
+		>
+	</button>
+
+	<div
+		id={`${title} accordion menu content`}
+		aria-labelledby={`${title} accordion menu button`}
+		class="accordion__content hidden max-h-0 overflow-hidden bg-accent/10 p-3 transition-all duration-300 ease-in-out sm:px-4"
+	>
+		<p class="prose mb-4 mt-1 max-w-full text-black transition-[height]">
+			{details}
+		</p>
+	</div>
+</div>
+
+<script>
+	function accordionSetup() {
+		const accordionMenus = document.querySelectorAll('.accordion') as NodeListOf<HTMLElement>
+		accordionMenus.forEach((accordionMenu) => {
+			const accordionButton = accordionMenu.querySelector('.accordion__button') as HTMLElement
+			const accordionChevron = accordionMenu.querySelector('.accordion__chevron') as HTMLElement
+			const accordionContent = accordionMenu.querySelector('.accordion__content') as HTMLElement
+
+			if (accordionButton && accordionContent && accordionChevron) {
+				accordionButton.addEventListener('click', (event) => {
+					if (!accordionMenu.classList.contains('active')) {
+						// if accordion is currently closed, so open it
+						accordionMenu.classList.add('active')
+						accordionButton.setAttribute('aria-expanded', 'true')
+
+						// set max-height to the height of the accordion content
+						// this makes it animate properly
+						accordionContent.classList.remove('hidden')
+						accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
+						accordionChevron.classList.add('rotate-180')
+					} else {
+						// accordion is currently open, so close it
+						accordionMenu.classList.remove('active')
+						accordionButton.setAttribute('aria-expanded', 'false')
+
+						// set max-height to the height of the accordion content
+						// this makes it animate properly
+						accordionContent.style.maxHeight = '0px'
+						accordionChevron.classList.remove('rotate-180')
+						// delay to allow close animation
+						setTimeout(() => {
+							accordionContent.classList.add('hidden')
+						}, 300)
+					}
+					event.preventDefault()
+					return false
+				})
+			}
+		})
+	}
+
+	// runs on initial page load
+	accordionSetup()
+
+	// runs on view transitions navigation
+	document.addEventListener('astro:after-swap', accordionSetup)
+</script>

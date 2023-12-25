@@ -1,6 +1,33 @@
-<section id="preguntas" class="flex flex-col items-center py-10">
-	<h1 class="mb-7 bg-white text-center text-2xl tracking-wide">PREGUNTAS</h1>
-	<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none">
-		<path d="M0 2H249" stroke="#B3A7D9" stroke-width="3"></path>
-	</svg>
+---
+import Accordion from '../Accordion.astro'
+import ImagePreguntas from '../../assets/imagen_3.png'
+import { Image } from 'astro:assets'
+import fondo from '../../assets/fondo_2.png'
+---
+
+<section id="preguntas" class="py-10">
+	<div class="mb-10 flex flex-col items-center">
+		<h1 class="mb-7 bg-white text-center text-2xl tracking-wide">PREGUNTAS FRECUENTES</h1>
+		<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none">
+			<path d="M0 2H249" stroke="#B3A7D9" stroke-width="3"></path>
+		</svg>
+	</div>
+	<div class="mx-10">
+		<Accordion
+			title="¿La terapia es para los locos?"
+			details="La terapia psicología se recomienda para personas que están pasando por una o varias situaciones que perciben como negativas, que ya intentaron quizás hasta resolverla ellos mismos una y otra vez sin obtener éxito, las personas que toman terapia tienen la sensatez consciente o inconsciente de acudir a un profesional para pedir ayudar."
+		/>
+	</div>
+
+	<div class="my-10">
+		<Image src={ImagePreguntas} alt="Berenice" height={323} width={247} class="mx-auto" />
+	</div>
+
+	<div class="relative flex items-center justify-center">
+		<Image src={fondo} alt="Berenice" height={144} width={327} />
+		<div class="absolute text-center text-white">
+			<h1 class="text-2xl leading-[6.50px]">¡Tú ya eres éxito!</h1>
+			<p class="mt-4 text-sm">solo hagamos que se manifieste</p>
+		</div>
+	</div>
 </section>
