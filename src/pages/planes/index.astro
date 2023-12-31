@@ -1,13 +1,14 @@
 ---
-import Header from '../components/Header.astro'
-import Layout from '../layouts/Layout.astro'
+import Header from '../../components/Header.astro'
+import Layout from '../../layouts/Layout.astro'
 import { Image } from 'astro:assets'
-import Logo from '../assets/logo_planes.svg'
-import PlanCard from '../components/PlanCard.astro'
-import LogoBlack from '../assets/blacklogo.svg'
-import FB from '../assets/facebook.png'
-import IG from '../assets/insta.png'
-import YT from '../assets/yt.png'
+import Logo from '../../assets/logo_planes.svg'
+import PlanCard from '../../components/PlanCard.astro'
+import LogoBlack from '../../assets/blacklogo.svg'
+import FB from '../../assets/facebook.png'
+import IG from '../../assets/insta.png'
+import YT from '../../assets/yt.png'
+import Footer from '../../components/Footer.astro'
 ---
 
 <Layout title="Planes Terapia Psicologica">
@@ -34,40 +35,28 @@ import YT from '../assets/yt.png'
 		<div class="my-8 text-center text-sm leading-normal text-black">
 			Puedes hacer el pago directamente aquí en la página web
 		</div>
-		<div class="flex flex-col gap-8 pb-8 md:flex-row md:gap-16">
+		<div class="flex flex-col gap-8 pb-8 md:flex-row md:gap-16 md:pb-48">
 			<PlanCard
 				plan="(Plan Lite)"
-				price="$45 dlls"
+				price="$47 dlls"
 				description={['Una sesión individual de terapia']}
+				link={'https://buy.stripe.com/9AQ5mxa0zcfBcWQ003'}
 			/>
-			<PlanCard
-				plan="(Plan Plus)"
-				price="$197 dlls"
-				description={[
-					'5 sesiones individuales de terapia.',
-					'Acompañamiento de mensajería durante el proceso.',
-					'Una llamada de emergencia de 15 minutos.'
-				]}
-			/>
+			<div class="md:translate-y-24">
+				<PlanCard
+					plan="(Plan Plus)"
+					price="$197 dlls"
+					description={[
+						'5 sesiones individuales de terapia.',
+						'Acompañamiento de mensajería durante el proceso.',
+						'Una llamada de emergencia de 15 minutos.'
+					]}
+					link="https://buy.stripe.com/4gwbKVgoX0wTcWQeUY"
+				/>
+			</div>
 		</div>
 	</div>
-	<div class="my-20 flex flex-col items-center gap-8 bg-white">
-		<Image src={LogoBlack} alt="Logo" width={LogoBlack.width} height={LogoBlack.height} />
-		<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none">
-			<path d="M0 2H249" stroke="#B3A7D9" stroke-width="3"></path>
-		</svg>
-		<div class="flex gap-12">
-			<a href="https://www.facebook.com/draberenicebastida">
-				<Image src={FB} alt="logo" height={FB.height} width={FB.width} class="tex mx-auto" />
-			</a>
-			<a href="www.youtube.com">
-				<Image src={IG} alt="logo" height={IG.height} width={IG.width} class="tex mx-auto" />
-			</a>
-			<a href="https://www.youtube.com/@incrementatuconsulta">
-				<Image src={YT} alt="logo" height={YT.height} width={YT.width} class="tex mx-auto" />
-			</a>
-		</div>
-	</div>
+	<Footer />
 </Layout>
 
 <style>

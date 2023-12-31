@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets'
+import LogoBlack from '../assets/blacklogo.svg'
+import FB from '../assets/facebook.svg'
+import IG from '../assets/instagram.svg'
+---
+
+<div class="my-20 flex flex-col items-center gap-8 bg-white">
+	<Image src={LogoBlack} alt="Logo" width={LogoBlack.width} height={LogoBlack.height} />
+	<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none">
+		<path d="M0 2H249" stroke="#B3A7D9" stroke-width="3"></path>
+	</svg>
+	<div class="flex gap-12">
+		<a href="https://www.facebook.com/psicologabastidas">
+			<Image src={FB} alt="logo" height={FB.height} width={FB.width} class="tex mx-auto" />
+		</a>
+		<a href="https://www.instagram.com/psicologabastidas/">
+			<Image src={IG} alt="logo" height={IG.height} width={IG.width} class="tex mx-auto" />
+		</a>
+	</div>
+</div>
