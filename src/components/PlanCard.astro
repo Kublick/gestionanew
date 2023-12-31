@@ -2,7 +2,9 @@
 const { plan, price, description, link } = Astro.props
 ---
 
-<div class="flex max-w-[300px] flex-col items-center bg-white p-7 py-12 shadow">
+<div
+	class="flex max-w-[300px] flex-col items-center justify-between bg-white p-7 py-12 shadow md:w-[453px]"
+>
 	<div class="text-center">
 		<h2 class="text-xl font-medium">Gestiona Tu Psicología</h2>
 		<p class="text-xl text-accent">{plan}</p>
