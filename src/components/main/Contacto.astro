@@ -1,0 +1,135 @@
+---
+import { Image } from 'astro:assets'
+import Logo from '../../assets/blacklogo.svg'
+import FB from '../../assets/facebook.png'
+import IG from '../../assets/insta.png'
+import YT from '../../assets/yt.png'
+import { whatsappLink } from '../../utils/contants'
+---
+
+<section id="contacto" class="pb-8">
+	<div class="z-10 mx-10 my-10 -translate-y-32 bg-white p-8 drop-shadow-xl md:mx-56 md:p-16">
+		<div class="flex flex-col gap-4">
+			<div class="md:flex md:gap-8">
+				<div class="flex flex-col justify-between gap-4">
+					<h1 class="mb-7 bg-white text-center text-2xl md:mb-2 md:text-left md:text-4xl">
+						CONTACTO
+					</h1>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="249"
+						height="4"
+						viewBox="0 0 249 4"
+						fill="none"
+					>
+						<path d="M0 2H249" stroke="#D9D9D9" stroke-width="3"></path>
+					</svg>
+
+					<a
+						href={whatsappLink}
+						class="mb-4 flex w-full items-center justify-center gap-2 rounded-xl bg-primary p-4 text-center text-sm text-white md:mb-0 md:min-w-[380px] md:text-xl"
+					>
+						<svg
+							width="17"
+							height="16"
+							viewBox="0 0 17 16"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								id="Vector"
+								d="M14.5162 2.3424C12.913 0.8328 10.7811 0.0008 8.50977 0C3.82944 0 0.0204011 3.5832 0.018701 7.988C0.017851 9.396 0.40887 10.7704 1.15181 11.9816L0 16L4.44827 15.0104C5.68848 15.6472 7.08425 15.9824 8.50552 15.9832H8.50892C13.1884 15.9832 16.9974 12.3992 17 7.9952C17.0017 5.86 16.1194 3.8528 14.5162 2.3424ZM12.6639 10.8432C12.4871 11.3096 11.6209 11.7592 11.2316 11.792C10.8423 11.8256 10.4776 11.9576 8.68573 11.2928C6.52918 10.4928 5.16741 8.412 5.062 8.2792C4.95575 8.1456 4.19581 7.1968 4.19581 6.2144C4.19581 5.232 4.74409 4.7488 4.93875 4.5496C5.13341 4.3496 5.36292 4.3 5.50487 4.3C5.64598 4.3 5.78794 4.3 5.9112 4.3048C6.0625 4.3104 6.22996 4.3176 6.38892 4.6496C6.57763 5.0448 6.9899 6.032 7.0426 6.132C7.0953 6.232 7.131 6.3488 7.06045 6.4816C6.9899 6.6144 6.9542 6.6976 6.84879 6.8144C6.74254 6.9312 6.62608 7.0744 6.53088 7.164C6.42462 7.2632 6.31411 7.372 6.43737 7.5712C6.56148 7.7712 6.9865 8.4248 7.61723 8.9536C8.42817 9.6336 9.11075 9.844 9.32327 9.9448C9.53578 10.0448 9.65903 10.028 9.78314 9.8944C9.90724 9.7616 10.3136 9.312 10.4547 9.112C10.5958 8.912 10.7377 8.9456 10.9324 9.012C11.1271 9.0784 12.1701 9.5616 12.3817 9.6616C12.5942 9.7616 12.7353 9.8112 12.788 9.8944C12.8407 9.9768 12.8407 10.3768 12.6639 10.8432Z"
+								fill="white"></path>
+						</svg>
+
+						 +52 (686) 234 - 9366</a
+					>
+				</div>
+
+				<div
+					class="flex w-full flex-col items-center justify-center gap-2 rounded-xl bg-primary p-4 text-center text-sm text-white md:gap-4 md:text-xl"
+				>
+					<div class="flex gap-2">
+						<svg
+							width="23"
+							height="23"
+							viewBox="0 0 23 23"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<g id="clock">
+								<path
+									id="Vector"
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M11.4998 20.6998C13.9398 20.6998 16.2799 19.7305 18.0052 18.0052C19.7305 16.2799 20.6998 13.9398 20.6998 11.4998C20.6998 9.05981 19.7305 6.71976 18.0052 4.99442C16.2799 3.26909 13.9398 2.2998 11.4998 2.2998C9.05981 2.2998 6.71976 3.26909 4.99442 4.99442C3.26909 6.71976 2.2998 9.05981 2.2998 11.4998C2.2998 13.9398 3.26909 16.2799 4.99442 18.0052C6.71976 19.7305 9.05981 20.6998 11.4998 20.6998ZM12.6498 6.89981C12.6498 6.59481 12.5286 6.3023 12.313 6.08663C12.0973 5.87097 11.8048 5.7498 11.4998 5.7498C11.1948 5.7498 10.9023 5.87097 10.6866 6.08663C10.471 6.3023 10.3498 6.59481 10.3498 6.89981V11.4998C10.3499 11.8048 10.4711 12.0972 10.6868 12.3129L13.939 15.5662C14.0458 15.6731 14.1726 15.7578 14.3122 15.8156C14.4519 15.8735 14.6015 15.9032 14.7526 15.9032C14.9037 15.9032 15.0533 15.8735 15.1929 15.8156C15.3325 15.7578 15.4594 15.6731 15.5662 15.5662C15.6731 15.4594 15.7578 15.3325 15.8156 15.1929C15.8735 15.0533 15.9032 14.9037 15.9032 14.7526C15.9032 14.6015 15.8735 14.4519 15.8156 14.3122C15.7578 14.1726 15.6731 14.0458 15.5662 13.939L12.6498 11.0237V6.89981Z"
+									fill="white"></path>
+							</g>
+						</svg>
+						<span> Horario</span>
+					</div>
+					<div class="mx-4 w-full border-[1px] border-white"></div>
+					<div
+						class="grid grid-cols-2 items-center justify-items-start text-sm md:gap-4 md:text-xl"
+					>
+						<p>Lun - Vie</p>
+						<p>10:00 am a 19:00 pm</p>
+						<p>Sab</p>
+						<p>10:00 am a 13:00 pm</p>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="flex w-full flex-col items-center justify-center gap-2 rounded-xl bg-primary p-4 text-center text-sm text-white md:flex-row md:gap-4"
+			>
+				<svg
+					width="25"
+					height="25"
+					viewBox="0 0 25 25"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<g id="mail">
+						<path
+							id="Vector"
+							d="M3.125 8.3335L11.3438 13.8127C11.6861 14.0411 12.0884 14.163 12.5 14.163C12.9116 14.163 13.3139 14.0411 13.6562 13.8127L21.875 8.3335M5.20833 19.7918H19.7917C20.3442 19.7918 20.8741 19.5723 21.2648 19.1816C21.6555 18.7909 21.875 18.261 21.875 17.7085V7.29183C21.875 6.73929 21.6555 6.20939 21.2648 5.81869C20.8741 5.42799 20.3442 5.2085 19.7917 5.2085H5.20833C4.6558 5.2085 4.12589 5.42799 3.73519 5.81869C3.34449 6.20939 3.125 6.73929 3.125 7.29183V17.7085C3.125 18.261 3.34449 18.7909 3.73519 19.1816C4.12589 19.5723 4.6558 19.7918 5.20833 19.7918Z"
+							stroke="white"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"></path>
+					</g>
+				</svg>
+
+				<a href="mailto:psicologaberenicebastidas@gmail.com" class="text-[11px] md:text-base"
+					>psicologaberenicebastidas@gmail.com</a
+				>
+			</div>
+			<p class="pb-6 text-center text-primary md:text-xl">Mexicali, Baja California</p>
+		</div>
+	</div>
+	<div class="mt-24">
+		<Image src={Logo} alt="logo" height={Logo.height} width={Logo.width} class="tex mx-auto" />
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="249"
+			height="4"
+			viewBox="0 0 249 4"
+			fill="none"
+			class="mx-auto my-9"
+		>
+			<path d="M0 2H249" stroke="#6D8C82" stroke-width="3"></path>
+		</svg>
+	</div>
+	<div class="flex justify-center gap-12">
+		<a href="https://www.facebook.com/draberenicebastida">
+			<Image src={FB} alt="logo" height={FB.height} width={FB.width} class="tex mx-auto" />
+		</a>
+		<a href="www.youtube.com">
+			<Image src={IG} alt="logo" height={IG.height} width={IG.width} class="tex mx-auto" />
+		</a>
+		<!-- <a href="https://www.youtube.com/@incrementatuconsulta">
+			<Image src={YT} alt="logo" height={YT.height} width={YT.width} class="tex mx-auto" />
+		</a> -->
+	</div>
+</section>

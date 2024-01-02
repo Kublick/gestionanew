@@ -1,0 +1,79 @@
+---
+import Form from '../Form.astro'
+import EbookImage from '../../assets/libro.png'
+import { Image } from 'astro:assets'
+---
+
+<section id="ebook" class="flex flex-col items-center bg-[#f2f2f2]">
+	<div class="triangle-bottom h-16"></div>
+	<div class="my-10">
+		<div class="mx-10 mb-10 flex flex-col items-center text-center">
+			<h1 class="md:z` we3text-4xl mb-7 text-center text-2xl tracking-wide">
+				OBTEN UN <span class="text-primary">MICRO E-BOOK</span>
+			</h1>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="249"
+				height="4"
+				viewBox="0 0 249 4"
+				fill="none"
+			>
+				<path d="M0 2H249" stroke="#B3A7D9" stroke-width="3"></path>
+			</svg>
+			<p class="my-10 text-sm md:px-40 md:text-2xl">
+				Por haber leído hasta aquí recibe de regalo el micro e-book Por que gestiona tu psicología
+				es la solución para ti.
+			</p>
+
+			<p class="md:px-32 md:text-xl">
+				Además, del e-book muy probable mente recibas una vez por semana un mail de mi parte sobre
+				pasar a la acción con la ayuda de la psicología. Encada uno de estos correos ofrezco mis
+				servicios de terapia, cursos y talleres.
+			</p>
+			<p class="mt-3 md:mt-8 md:px-32 md:text-xl">
+				Si te cansas de leer mis cartas podrás des suscribirte y te puedes dar de baja con dos
+				clicKs.
+			</p>
+		</div>
+		<div class="mx-8 my-20 md:mx-56">
+			<Form />
+		</div>
+
+		<Image src={EbookImage} alt="Ebook" widths={[344, 646]} class="mx-auto" />
+	</div>
+	<div class="triangle-top h-16"></div>
+</section>
+<style>
+	.triangle-bottom {
+		position: relative;
+	}
+
+	.triangle-bottom::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-left: 50vw solid transparent; /* Use viewport units to make the triangle responsive */
+		border-right: 50vw solid transparent; /* Use viewport units to make the triangle responsive */
+		border-top: 75px solid white;
+	}
+	.triangle-top {
+		position: relative;
+	}
+
+	.triangle-top::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-left: 50vw solid transparent; /* Use viewport units to make the triangle responsive */
+		border-right: 50vw solid transparent; /* Use viewport units to make the triangle responsive */
+		border-bottom: 75px solid white;
+	}
+</style>

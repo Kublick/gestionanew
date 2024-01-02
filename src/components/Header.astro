@@ -1,0 +1,129 @@
+---
+import { Image } from 'astro:assets'
+import logotipo from '../assets/logo_menu.svg'
+import WhatsLogo from '../assets/Whatslogo.astro'
+
+const menuItems = [
+	{
+		name: 'Inicio',
+		path: '/'
+	},
+	{
+		name: 'Servicios',
+		path: '#servicios'
+	},
+	{
+		name: 'Sobre Mi',
+		path: '#sobremi'
+	},
+	{
+		name: 'Testimonios',
+		path: '#testimonios'
+	},
+	{
+		name: 'Preguntas',
+		path: '#preguntas'
+	},
+
+	{
+		name: 'Contacto',
+		path: '#contacto'
+	}
+]
+
+import { whatsappLink } from '../utils/contants'
+---
+
+<nav class="fixed start-0 top-0 z-20 w-full bg-white shadow-lg">
+	<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-2 md:p-4">
+		<div class="pl-6">
+			<Image src={logotipo} alt="logotipo" widths={[101, 169]} />
+		</div>
+
+		<div
+			id="menu"
+			class="hidden w-full flex-col items-start justify-between md:flex md:w-auto md:flex-row"
+		>
+			{
+				menuItems.map((item) => (
+					<a
+						href={item.path}
+						class="font-sm w-full whitespace-nowrap px-4 py-2 text-sm font-light text-gray-700  hover:bg-primary"
+					>
+						{item.name}
+					</a>
+				))
+			}
+			<div class="my-4 ml-2 md:my-0 md:ml-0">
+				<a
+					href={whatsappLink}
+					class="flex items-center gap-2 whitespace-nowrap rounded-lg bg-whatsapp p-2 shadow-lg hover:bg-green-400"
+				>
+					<WhatsLogo />
+
+					<span class="text-sm font-semibold text-white"> +52 (686) 234 - 9366</span>
+				</a>
+			</div>
+		</div>
+
+		<button id="hamburger" class="absolute right-0 top-0 m-4 md:hidden">
+			<svg
+				id="hamburger-icon"
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+				class="h-6 w-6"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M4 6h16M4 12h16M4 18h16"></path>
+			</svg>
+			<svg
+				id="close-icon"
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+				class="hidden h-6 w-6"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M6 18L18 6M6 6l12 12"></path>
+			</svg>
+		</button>
+	</div>
+</nav>
+
+<script>
+	window.addEventListener('load', function () {
+		const hamburger = document.getElementById('hamburger') as HTMLElement
+		const hamburgerIcon = document.getElementById('hamburger-icon') as HTMLElement
+		const closeIcon = document.getElementById('close-icon') as HTMLElement
+		const menu = document.getElementById('menu') as HTMLElement
+		const menuItems = Array.from(document.querySelectorAll('#menu a')) as HTMLElement[]
+
+		hamburger.addEventListener('click', toggleMenu)
+
+		menuItems.forEach((item) => {
+			item.addEventListener('click', toggleMenu)
+		})
+
+		function toggleMenu() {
+			if (menu.classList.contains('hidden')) {
+				menu.classList.remove('hidden')
+				menu.classList.add('flex')
+			} else {
+				menu.classList.add('hidden')
+				menu.classList.remove('flex')
+			}
+
+			hamburgerIcon.classList.toggle('hidden')
+			closeIcon.classList.toggle('hidden')
+		}
+	})
+</script>

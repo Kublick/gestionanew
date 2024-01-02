@@ -1,0 +1,80 @@
+---
+import Header from '../../components/Header.astro'
+import Layout from '../../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import Logo from '../../assets/logo_planes.svg'
+import PlanCard from '../../components/PlanCard.astro'
+import LogoBlack from '../../assets/blacklogo.svg'
+import FB from '../../assets/facebook.png'
+import IG from '../../assets/insta.png'
+import YT from '../../assets/yt.png'
+import Footer from '../../components/Footer.astro'
+---
+
+<Layout title="Planes Terapia Psicologica">
+	<Header />
+	<div class="pt-[56px] md:mt-[56px]">
+		<h1 class="mt-24 text-center text-2xl tracking-wide">Felicidades tu cita para terapia</h1>
+		<h1 class="text-center text-2xl tracking-wide">
+			psicológica está <span class="text-primary">reservada</span>
+		</h1>
+		<Image src={Logo} alt="logo" width={Logo.width} height={Logo.height} class="mx-auto py-24" />
+		<div class="mx-10 mb-8 text-center text-sm leading-[31px] text-black">
+			Estarías confirmando si te parece bien tu asistencia a la consulta, realizando el pago de la
+			misma, preferentemente el día de hoy o en el transcurso de la semana, antes del día de la cita
+			si pudieras por favor, para darte prioridad en la agenda y además así me estarías confirmado
+			que si asistirás a nuestra reunión y que no me dejaras plantada.
+		</div>
+	</div>
+	<div class="flex flex-col items-center bg-[#f2f2f2] py-2">
+		<div class="triangle-bottom h-16"></div>
+		<h1 class="mt-8 text-center text-2xl tracking-wide">PLANES</h1>
+		<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none">
+			<path d="M0 2H249" stroke="#B3A7D9" stroke-width="3"></path>
+		</svg>
+		<div class="my-8 text-center text-sm leading-normal text-black">
+			Puedes hacer el pago directamente aquí en la página web
+		</div>
+		<div class="flex flex-col gap-8 pb-8 md:flex-row md:gap-16 md:pb-48">
+			<PlanCard
+				plan="(Plan Lite)"
+				price="$700 pesos"
+				description={['Una sesión individual de terapia']}
+				link="https://buy.stripe.com/8wMeX7egP93p4qk00a"
+			/>
+			<div class="md:translate-y-24">
+				<PlanCard
+					plan="(Plan Plus)"
+					price="$1800 pesos"
+					description={[
+						'3 sesiones individuales de terapia.',
+						'Acompañamiento de mensajería durante el proceso.',
+						'Una llamada de emergencia de 15 minutos.'
+					]}
+					link="https://buy.stripe.com/8wMaGRa0z7ZlcWQeV5"
+					selected
+				/>
+			</div>
+		</div>
+	</div>
+	<Footer />
+</Layout>
+
+<style>
+	.triangle-bottom {
+		position: relative;
+	}
+
+	.triangle-bottom::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-left: 50vw solid transparent; /* Use viewport units to make the triangle responsive */
+		border-right: 50vw solid transparent; /* Use viewport units to make the triangle responsive */
+		border-top: 75px solid white;
+	}
+</style>
