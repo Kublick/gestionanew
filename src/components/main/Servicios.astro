@@ -11,7 +11,7 @@ const serviceItems = [
 		img: LogoService1
 	},
 	{
-		title: 'Desarrollo Personal, Cursos y Talleres',
+		title: 'Cursos y Talleres',
 		img: LogoService2
 	},
 	{
@@ -23,13 +23,7 @@ const serviceItems = [
 
 <section id="servicios" class="triangle-top mt-[100px] bg-zinc-100">
 	<div class="flex flex-col items-center">
-		<Image
-			src={LogoServicio}
-			alt="Logo"
-			height={47}
-			width={47}
-			class="md:my-12 md:h-[69] md:w-[69]"
-		/>
+		<Image src={LogoServicio} alt="Logo" widths={[47, 69]} class="md:my-12" />
 		<div class="pb-10 pt-5">
 			<h1 class="mb-7 text-center text-2xl tracking-wide">SERVICIOS</h1>
 			<svg

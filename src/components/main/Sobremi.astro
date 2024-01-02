@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import Berenice from '../../assets/imagen_2.png'
+import { whatsappLink } from '../../utils/contants'
 ---
 
 <section id="sobremi" class="py-10">
@@ -44,7 +45,15 @@ import Berenice from '../../assets/imagen_2.png'
 			alt="Berenice Bastidas"
 			height={277}
 			width={234}
-			class="mb-12 md:h-[675px] md:w-[568px]"
+			class="mb-12 md:hidden"
+		/>
+
+		<Image
+			src={Berenice}
+			alt="Berenice Bastidas"
+			height={Berenice.height}
+			width={Berenice.width}
+			class="hidden md:mb-12 md:block"
 		/>
 	</div>
 	<div class="bg-sesion-image bg-cover bg-center pb-6">
@@ -57,7 +66,7 @@ import Berenice from '../../assets/imagen_2.png'
 			</p>
 
 			<a
-				href="https://api.whatsapp.com/message/LD54V7JCH3TXD1"
+				href={whatsappLink}
 				target="_blank"
 				class="mx-auto rounded-xl bg-white px-8 py-2 font-semibold text-primary shadow-xl hover:bg-primary hover:text-white md:px-6 md:py-8 md:text-2xl"
 				>Quiero agendar la sesión</a

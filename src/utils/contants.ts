@@ -22,3 +22,5 @@ export const event = [
 		image: woman3
 	}
 ]
+
+export const whatsappLink = 'https://wa.link/t7ddog'
