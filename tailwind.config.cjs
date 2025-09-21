@@ -7,12 +7,14 @@ module.exports = {
 				primary: '#B3A7D9',
 				secondary: '#EAE6F4',
 				accent: '#6D8C82',
-				whatsapp: '#25d366'
+				whatsapp: '#25d366',
+				texto: '#70648F'
 			},
 			fontFamily: {
 				bebas: ['Bebas Neue', 'sans-serif'],
 				montserrat: ['Montserrat', 'serif'],
-				mitalic: ['Montserrat Italic', 'serif']
+				mitalic: ['Montserrat Italic', 'serif'],
+				poppins: ['Poppins', 'sans-serif']
 			},
 			backgroundImage: {
 				'hero-image': "url('/imagen_inicio.webp')",
