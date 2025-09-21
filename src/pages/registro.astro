@@ -8,15 +8,9 @@ import MariposaR from '../assets/Mariposa_3d_R.png'
 import MariposaL from '../assets/Mariposa_3d_L.png'
 import MariposaCentro from '../assets/Mariposa_centro.png'
 import MariposaAbajo from '../assets/Mariposa_abajo_mobile.png'
-
 import Mockbolie from '../assets/mock_mobile.png'
 import BereniceMobileVerde from '../assets/foto_verde_berenice_mobile.png'
-import Clase1Mobile from '../assets/Clase_1_mobile.png'
-import Clase2Mobile from '../assets/Clase_2_mobile.png'
-import Clase3Mobile from '../assets/Clase_3_mobile.png'
-import Clase4Mobile from '../assets/Clase_4_mobile.png'
 import MariposaClase1Mobile from '../assets/mariposa_clase_1_mobile.png'
-import BereniceTerapeuta from '../assets/berenice_terapeuta._mobile.png'
 import BereniceDesktop from '../assets/berenice_desktop.png'
 import LayoutCurso from '../layouts/LayoutCurso.astro'
 import Clase1Desktop from '../assets/clase_1_desktop.png'
@@ -28,7 +22,7 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 
 <LayoutCurso title="Evento">
 	<section class="grid bg-primary font-poppins lg:grid-cols-2 lg:items-center">
-		<div>
+		<div id="form-element">
 			<Image src={LogoPurpura} alt="Logo" width={154} height={61} class="mx-auto pt-6 md:hidden" />
 			<Image src={MariposaTop} alt="Mariposa Top" class="absolute top-0" />
 
@@ -80,7 +74,9 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 			</div>
 		</div>
 
-		<div class="relative flex flex-col items-center bg-[url('/patron_de_mariposas.png')]">
+		<div
+			class="relative flex flex-col items-center bg-[url('/patron_de_mariposas.png')] lg:bg-none"
+		>
 			<Image
 				src={BereniceDesktop}
 				alt="Berenice"
@@ -142,7 +138,7 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 				</div>
 			</div>
 		</div>
-		<div class="relative bg-[url('/fondo_logo_verde_mobile.png')]">
+		<div class="relative bg-[url('/fondo_logo_verde_mobile.png')] lg:bg-none">
 			<h2
 				class="z-1 absolute left-1/2 top-24 hidden w-[504px] -translate-x-1/2 py-4 text-center text-3xl font-bold text-white lg:block"
 			>
@@ -152,11 +148,11 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 		</div>
 	</section>
 
-	<section class="bg-[#5B7D70] pb-4 lg:pb-0">
+	<section class="bg-[#5B7D70] pb-4 lg:bg-[url('/mariposas_bg_s3.png')] lg:pb-0">
 		<div class="grid items-center lg:grid-cols-2">
 			<div>
 				<div
-					class="relative flex min-h-[364px] flex-col items-center bg-[url('/fondo_logo_verde_mobile.png')]"
+					class="relative flex min-h-[364px] flex-col items-center bg-[url('/fondo_logo_verde_mobile.png')] lg:bg-none"
 				>
 					<Image
 						src={BereniceMobileVerde}
@@ -313,15 +309,14 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 	</section>
 
 	<section class="bg-[#f3f3f3] py-6 lg:bg-[url('/fondo_mariposa_desktop_blanco.png')]">
-		<h2 class="mx-auto w-[80%] text-center text-xl font-bold uppercase text-[#554871]">
+		<h2
+			class="mx-auto w-[80%] text-center text-xl font-bold uppercase text-[#554871] lg:pt-8 lg:text-3xl"
+		>
 			esto es lo que vas a aprender en las 4 clases del taller online
 		</h2>
-		<p class="py-2 text-center">(del 25 al 30 de Noviembre)</p>
-		<div class="grid lg:grid-cols-2 lg:space-y-8">
+		<p class="py-2 text-center lg:text-2xl">(del 25 al 30 de Noviembre)</p>
+		<div class="grid items-center gap-8 lg:grid-cols-2 lg:pt-8">
 			<div class="relative">
-				<!-- <Image src={Clase1Mobile} alt="Clase 1 mobile mock" class="mx-auto my-4 lg:hidden" /> -->
-				<!-- <Image src={Clase1Desktop} alt="Clase 1 desktop mock" class="mx-auto my-4 px-4 lg:block" /> -->
-
 				<Image
 					src={Clase1Desktop}
 					alt="Clase 1 desktop mock"
@@ -330,16 +325,13 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 					class="mx-auto h-[188px] w-[321px] object-cover md:h-[348px] md:w-[593px]"
 					sizes="(max-width: 768px) 321px, 593px"
 				/>
-				<!-- 
-					class="-mt-8 w-[50%] md:w-[80%]"
-				sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" -->
 
 				<h2
 					class="mx-auto w-[80%] text-center text-xl font-bold uppercase text-[#554871] lg:mt-4 lg:text-2xl"
 				>
 					CLASE #1 (Septiembre 25)
 				</h2>
-				<p class="mx-auto px-4 text-center text-lg text-[#554871] lg:w-[50%] lg:text-xl">
+				<p class="mx-auto px-4 text-center text-lg text-[#554871] lg:w-[50%] lg:pt-4 lg:text-2xl">
 					Arranca de Raíz el dolor de su traición sin morir en el intento
 				</p>
 				<Image
@@ -349,7 +341,7 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 				/>
 			</div>
 
-			<div class="relative pt-4">
+			<div class="relative">
 				<Image
 					src={Clase2Desktop}
 					alt="Clase 2 desktop mock"
@@ -363,7 +355,9 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 				>
 					CLASE #2 (Septiembre 26)
 				</h2>
-				<p class="px-4 text-center text-lg text-[#554871] lg:mx-auto lg:w-[50%] lg:text-xl">
+				<p
+					class="px-4 text-center text-lg text-[#554871] lg:mx-auto lg:w-[50%] lg:pt-4 lg:text-2xl"
+				>
 					Conoce los indicadores para saber si perdonar o irte para siempre
 				</p>
 				<Image src={MariposaAbajo} alt="Mariposa Top" class="absolute -bottom-4 lg:hidden" />
@@ -383,7 +377,7 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 					>
 						CLASE #3 (Septiembre 29)
 					</h2>
-					<p class="mx-auto w-[50%] px-4 text-center text-lg text-[#554871]">
+					<p class="mx-auto w-[50%] px-4 text-center text-lg text-[#554871] lg:pt-4 lg:text-2xl">
 						Cómo pasar de la Herida a la libertad emocional
 					</p>
 					<Image
@@ -407,7 +401,9 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 				>
 					CLASE #4 (Septiembre 30)
 				</h2>
-				<p class="px-4 text-center text-lg text-[#554871] lg:mx-auto lg:w-[50%] lg:text-xl">
+				<p
+					class="px-4 text-center text-lg text-[#554871] lg:mx-auto lg:w-[50%] lg:pt-4 lg:text-2xl"
+				>
 					7 pasoss para blindarte y que no te vuelva a pasar
 				</p>
 				<Image src={MariposaAbajo} alt="Mariposa Top" class="absolute -bottom-4 lg:hidden" />
@@ -462,14 +458,17 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 					¿Lista para dar el primer paso hacia tu sanación?
 				</p>
 
-				<button
-					class="mx-auto block w-[80%]
+				<a href="#form-element">
+					<button
+						class="mx-auto block w-[80%]
 				 rounded-full border border-white bg-gradient-to-b from-[#53786A]/80 to-[#5A8072] p-4"
-				>
-					<p class="text-center text-xl font-bold uppercase text-white lg:text-3xl">
-						!Registrarme ahora!
-					</p>
-				</button>
+						type="button"
+					>
+						<p class="text-center text-xl font-bold uppercase text-white lg:text-3xl">
+							!Registrarme ahora!
+						</p>
+					</button>
+				</a>
 				<p class="py-2 text-center text-xs text-white lg:text-base">
 					Confirma tu asistencia y unte al grupo oficial del evento
 				</p>
