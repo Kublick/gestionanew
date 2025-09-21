@@ -1,0 +1,37 @@
+---
+import LayoutCurso from '../layouts/LayoutCurso.astro'
+import Danger from '../assets/danger.png'
+import Image from 'astro/components/Image.astro'
+---
+
+<LayoutCurso title="Gracias por registrarte">
+	<div class="mx-auto space-y-4 px-4 py-36 lg:my-16 lg:max-w-5xl lg:space-y-8">
+		<div class="relative mx-auto bg-[#6F638B] p-4 text-lg text-white lg:text-3xl">
+			<Image
+				src={Danger}
+				alt="Danger Logo"
+				class="absolute -top-[90px] left-1/2 -translate-x-1/2"
+			/>
+			<p class="text-center font-bold uppercase">!importante!</p>
+		</div>
+		<div class="white mx-auto h-16 max-w-4xl rounded-lg bg-gradient-to-r from-[#4DE128]"></div>
+		<p class="text-center text-xl font-semibold uppercase lg:text-3xl">!Te falta solo un paso!</p>
+		<p class="text-center text-xl uppercase lg:text-3xl">
+			Entra al <strong>grupo oficial de Whatsapp</strong> del TALLER y asegura tu cupo!
+		</p>
+
+		<div class="mx-auto max-w-5xl">
+			<button class="w-full rounded-lg bg-[#4ACE29] p-4 text-lg text-white lg:text-3xl">
+				<p class="text-center font-bold uppercase">! ENTRAR AL GRUPO DE WHATSAPP !</p>
+			</button>
+		</div>
+		<p class="mx-auto max-w-4xl text-center text-xl">
+			Por ahí vamos a enviar el enlace de las clases, materiales de apoyo e información de primera
+			mano
+		</p>
+
+		<div class="mx-auto bg-[#6F638B] p-4 text-lg text-white lg:text-3xl">
+			<p class="text-center font-bold uppercase">HABLAR CON SOPORTE</p>
+		</div>
+	</div>
+</LayoutCurso>

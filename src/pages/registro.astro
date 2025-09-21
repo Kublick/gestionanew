@@ -53,14 +53,16 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 						</p>
 						<ChevronDown />
 					</div>
-					<form class="space-y-2 md:space-y-6">
+					<form id="registro-form" class="space-y-2 md:space-y-6">
 						<input
 							type="text"
+							name="nombre"
 							placeholder="Tu Nombre"
 							class="h-10 w-full rounded-lg border-2 border-white bg-transparent px-4 text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-0 md:h-14 md:text-xl"
 						/>
 						<input
 							type="email"
+							name="correo"
 							class="h-10 w-full rounded-lg border-2 border-white bg-transparent px-4 text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-0 md:h-14 md:text-xl"
 							placeholder="correo@correo.com"
 						/>
@@ -476,3 +478,28 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 		</div>
 	</section>
 </LayoutCurso>
+
+<script type="module">
+	const form = document.getElementById('registro-form')
+
+	form.addEventListener('submit', async (e) => {
+		e.preventDefault()
+		const data = {
+			name: form.nombre.value,
+			email: form.correo.value,
+			eventId: 1
+		}
+
+		const result = await fetch('https://terapia-back.blancarte.workers.dev/form', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(data)
+		})
+
+		if (result.ok) {
+			window.location.href = '/registro-gracias'
+		} else {
+			return
+		}
+	})
+</script>
