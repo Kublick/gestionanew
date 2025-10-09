@@ -1,0 +1,349 @@
+---
+import LayoutCurso from '../../layouts/LayoutCurso.astro'
+import { Calendar, CheckCircle2, Clock, Users, Video } from '@lucide/astro'
+---
+
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+<LayoutCurso title="Grupo VIP">
+	<div class="min-h-screen">
+		{/* Hero Section */}
+		<section
+			class="via-background relative overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5"
+		>
+			<div class="container mx-auto px-4 py-16 md:py-24 lg:py-32">
+				<div class="mx-auto max-w-4xl text-center">
+					<div
+						class="mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
+					>
+						<span class="relative flex h-2 w-2">
+							<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary"
+							></span>
+							<span class="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
+						</span>
+						 Experiencia VIP - Cupo Limitado
+					</div>
+
+					<h1
+						class="text-balance text-foreground mb-6 font-sans text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+					>
+						Libérate de la Infidelidad y su Dolor
+					</h1>
+
+					<p class="text-pretty mb-8 text-lg md:text-xl lg:text-2xl">
+						Transforma tu dolor en crecimiento personal con nuestro taller intensivo de 4 días
+					</p>
+
+					<div class="mb-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+						<div class="text-center sm:text-left">
+							<div class="mb-1 text-sm font-medium">Inversión VIP</div>
+							<div class="flex items-baseline gap-2">
+								<span class="text-5xl font-bold text-primary">$100</span>
+								<span class="text-lg">MXN</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
+						<button class="text-lg font-semibold"> Reservar Mi Lugar Ahora</button>
+						<button class="bg-transparent text-lg"> Ver Detalles del Programa</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Benefits Section */}
+		<section class="py-16 md:py-24">
+			<div class="container mx-auto px-4">
+				<div class="mb-12 text-center">
+					<h2 class="text-balance mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+						Beneficios de la Experiencia VIP
+					</h2>
+					<p class="text-pretty text-lg">Todo lo que necesitas para tu proceso de sanación</p>
+				</div>
+
+				<div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+					<div
+						class="flex flex-col gap-6 rounded-xl border-2 bg-white py-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-lg"
+					>
+						<div class="flex gap-4 p-6">
+							<div class="flex-shrink-0">
+								<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+									<Video class="h-6 w-6 text-primary" />
+								</div>
+							</div>
+							<div>
+								<h3 class="mb-2 text-xl font-semibold">4 Reuniones por Zoom</h3>
+								<p class="">
+									Sesiones en vivo interactivas donde podrás participar, hacer preguntas y conectar
+									con otros participantes
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="flex flex-col gap-6 rounded-xl border-2 bg-white py-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-lg"
+					>
+						<div class="flex gap-4 p-6">
+							<div class="flex-shrink-0">
+								<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+									<Users class="h-6 w-6 text-primary" />
+								</div>
+							</div>
+							<div>
+								<h3 class="mb-2 text-xl font-semibold">Acceso a Web Secreta</h3>
+								<p class="">
+									Plataforma exclusiva con recursos adicionales, materiales de apoyo y contenido
+									complementario
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="bg-card flex flex-col gap-6 rounded-xl border-2 py-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-lg"
+					>
+						<div class="flex gap-4 p-6">
+							<div class="flex-shrink-0">
+								<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+									<Clock class="h-6 w-6 text-primary" />
+								</div>
+							</div>
+							<div>
+								<h3 class="mb-2 text-xl font-semibold">Grabaciones por 3 Meses</h3>
+								<p class="">
+									Revisa las sesiones cuando quieras durante 90 días para profundizar en tu proceso
+									de sanación
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="flex flex-col gap-6 rounded-xl border-2 bg-white py-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-lg"
+					>
+						<div class="flex gap-4 p-6">
+							<div class="flex-shrink-0">
+								<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+									<CheckCircle2 class="h-6 w-6 text-primary" />
+								</div>
+							</div>
+							<div>
+								<h3 class="mb-2 text-xl font-semibold">Soporte Continuo</h3>
+								<p class="">
+									Acompañamiento durante todo el proceso con herramientas prácticas para tu
+									transformación personal
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Schedule Section */}
+		<section class="bg-muted/50 py-16 md:py-24">
+			<div class="container mx-auto px-4">
+				<div class="mb-12 text-center">
+					<h2 class="text-balance mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+						Programa del Taller
+					</h2>
+					<p class="text-pretty text-lg">4 sesiones transformadoras del 28 al 31 de octubre</p>
+				</div>
+
+				<div class="mx-auto max-w-3xl space-y-4">
+					<div
+						class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm"
+					>
+						<div class="flex items-start gap-4 p-6">
+							<div
+								class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary font-bold text-white"
+							>
+								1
+							</div>
+							<div class="flex-1">
+								<div class="mb-2 flex items-center gap-2 text-sm">
+									<Calendar class="h-4 w-4" />
+									<span>Lunes 28 de Octubre - 7:00 PM</span>
+								</div>
+								<h3 class="mb-2 text-xl font-semibold">Comprendiendo la Infidelidad</h3>
+								<p class="">
+									Exploramos las causas, tipos y el impacto emocional de la infidelidad en las
+									relaciones
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm"
+					>
+						<div class="flex items-start gap-4 p-6">
+							<div
+								class="text-primary-foreground flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary font-bold text-white"
+							>
+								2
+							</div>
+							<div class="flex-1">
+								<div class="mb-2 flex items-center gap-2 text-sm">
+									<Calendar class="h-4 w-4" />
+									<span>Martes 29 de Octubre - 7:00 PM</span>
+								</div>
+								<h3 class="mb-2 text-xl font-semibold">Procesando el Dolor</h3>
+								<p class="">
+									Herramientas para gestionar las emociones intensas y comenzar el proceso de
+									sanación
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm"
+					>
+						<div class="flex items-start gap-4 p-6">
+							<div
+								class="text-primary-foreground flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary font-bold text-white"
+							>
+								3
+							</div>
+							<div class="flex-1">
+								<div class="mb-2 flex items-center gap-2 text-sm">
+									<Calendar class="h-4 w-4" />
+									<span>Miércoles 30 de Octubre - 7:00 PM</span>
+								</div>
+								<h3 class="mb-2 text-xl font-semibold">Reconstruyendo la Confianza</h3>
+								<p class="">
+									Estrategias para recuperar la confianza en ti mismo y en tus relaciones futuras
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm"
+					>
+						<div class="flex items-start gap-4 p-6">
+							<div
+								class="text-primary-foreground flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary font-bold text-white"
+							>
+								4
+							</div>
+							<div class="flex-1">
+								<div class="mb-2 flex items-center gap-2 text-sm">
+									<Calendar class="h-4 w-4" />
+									<span>Jueves 31 de Octubre - 7:00 PM</span>
+								</div>
+								<h3 class="mb-2 text-xl font-semibold">Transformación y Nuevo Comienzo</h3>
+								<p class="">
+									Creando un plan de acción para tu futuro y cerrando el ciclo con esperanza
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Payment Section */}
+		<section class="py-16 md:py-24">
+			<div class="container mx-auto px-4">
+				<div class="mx-auto max-w-2xl">
+					<div class="mb-12 text-center">
+						<h2 class="text-balance mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+							Asegura Tu Lugar Ahora
+						</h2>
+						<p class="text-pretty text-lg">Inversión de solo $100 MXN para transformar tu vida</p>
+					</div>
+
+					<div
+						class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border-2 border-primary/20 py-6 shadow-sm"
+					>
+						<div class="p-8">
+							<div class="mb-8 text-center">
+								<div class="mb-2 text-sm font-medium">Pago Seguro con Tarjeta</div>
+								<div class="mb-6 flex items-baseline justify-center gap-2">
+									<span class="text-5xl font-bold text-primary">$100</span>
+									<span class="text-lg">MXN</span>
+								</div>
+
+								<div class="space-y-3">
+									<a
+										href="https://buy.stripe.com/6oUfZh9mRahT5lT93De7m0p"
+										class="rounded-xl bg-primary px-6 py-2 text-white"
+									>
+										Pagar con Tarjeta u Oxxo
+									</a>
+									<!-- <stripe-buy-button
+										buy-button-id="buy_btn_1SDnJXHlYy5jepIELmRpNpYq"
+										publishable-key="pk_live_51JCQQqHlYy5jepIEFB66VSOAeiL0sVeDG2ojuPjhOQ8mw3icpHUUW8ZY6t64solVIHrwuGHJsw6Zf6cRBxkgJXbQ00pb3olrkh"
+									>
+									</stripe-buy-button> -->
+									<div class="flex items-center gap-2 pt-2 text-xs">
+										<CheckCircle2 class="h-4 w-4 text-primary" />
+										<span>Pago 100% seguro y encriptado</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- <div class="relative mb-8">
+								<div class="relative flex justify-center text-sm">
+									<span class="bg-div px-4">O paga desde México</span>
+								</div>
+							</div> -->
+
+							<div class="space-y-6">
+								<div>
+									<h3 class="mb-3 font-semibold">Transferencia Bancaria</h3>
+									<div class="bg-muted/50 rounded-lg p-4 text-sm">
+										<div class="mb-2 flex justify-between">
+											<span class="">Banco:</span>
+											<span class="font-medium">HSBC</span>
+										</div>
+										<div class="mb-2 flex justify-between">
+											<span class="">Cuenta:</span>
+											<span class="font-mono font-medium">6427435536</span>
+										</div>
+										<div class="mb-2 flex justify-between">
+											<span class="">CLABE:</span>
+											<span class="font-mono font-medium">021020064274355366</span>
+										</div>
+										<div class="flex justify-between">
+											<span class="">Titular:</span>
+											<span class="font-medium">Leslie Berenice Gonzalez Bastidas</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="rounded-lg bg-accent/10 p-4 text-sm">
+									<p class="text-accent-foreground">
+										<strong>Importante:</strong> Después de realizar tu pago, envía tu comprobante
+										por WhatsApp o correo para confirmar tu registro.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Footer CTA */}
+		<section class="text-primary-foreground bg-gradient-to-br from-primary to-primary/80 py-16">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-balance mb-4 text-3xl font-bold md:text-4xl">
+					¿Listo para Comenzar tu Transformación?
+				</h2>
+				<p class="text-pretty mb-8 text-lg opacity-90 md:text-xl">
+					No dejes que el dolor del pasado defina tu futuro
+				</p>
+				<a
+					href="https://buy.stripe.com/6oUfZh9mRahT5lT93De7m0p"
+					class="rounded-xl border border-primary bg-white p-2 px-6 text-lg font-semibold text-black hover:border-black"
+					>Reservar Mi Lugar Ahora</a
+				>
+			</div>
+		</section>
+	</div>
+</LayoutCurso>

@@ -35,3 +35,17 @@ import Image from 'astro/components/Image.astro'
 		</div>
 	</div>
 </LayoutCurso>
+
+<script type="module">
+	const button = document.querySelector('button')
+	const redirectUrl = 'https://chat.whatsapp.com/CL4pVZMYgOCAEZrRe9cFOn'
+
+	const timer = setTimeout(() => {
+		window.location.href = redirectUrl
+	}, 5000)
+
+	button.addEventListener('click', () => {
+		clearTimeout(timer)
+		window.location.href = redirectUrl
+	})
+</script>
