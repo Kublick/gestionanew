@@ -1,6 +1,6 @@
 ---
 import LayoutCurso from '../../layouts/LayoutCurso.astro'
-import { Calendar, CheckCircle2, Clock, Users, Video } from '@lucide/astro'
+import { Calendar, CheckCircle2, Star, Users, Video } from '@lucide/astro'
 ---
 
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
@@ -45,8 +45,11 @@ import { Calendar, CheckCircle2, Clock, Users, Video } from '@lucide/astro'
 					</div>
 
 					<div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
-						<button class="text-lg font-semibold"> Reservar Mi Lugar Ahora</button>
-						<button class="bg-transparent text-lg"> Ver Detalles del Programa</button>
+						<a
+							href="https://buy.stripe.com/6oUfZh9mRahT5lT93De7m0p"
+							class="rounded-xl border bg-primary p-2 px-6 text-lg font-semibold text-white hover:shadow-xl"
+							>Reservar Mi Lugar Ahora</a
+						>
 					</div>
 				</div>
 			</div>
@@ -101,7 +104,7 @@ import { Calendar, CheckCircle2, Clock, Users, Video } from '@lucide/astro'
 						</div>
 					</div>
 
-					<div
+					<!-- <div
 						class="bg-card flex flex-col gap-6 rounded-xl border-2 py-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-lg"
 					>
 						<div class="flex gap-4 p-6">
@@ -137,7 +140,7 @@ import { Calendar, CheckCircle2, Clock, Users, Video } from '@lucide/astro'
 								</p>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>
@@ -165,13 +168,13 @@ import { Calendar, CheckCircle2, Clock, Users, Video } from '@lucide/astro'
 							<div class="flex-1">
 								<div class="mb-2 flex items-center gap-2 text-sm">
 									<Calendar class="h-4 w-4" />
-									<span>Lunes 28 de Octubre - 7:00 PM</span>
+									<span>Martes 28 de Octubre - 10:00am a 11:00am</span>
 								</div>
-								<h3 class="mb-2 text-xl font-semibold">Comprendiendo la Infidelidad</h3>
-								<p class="">
-									Exploramos las causas, tipos y el impacto emocional de la infidelidad en las
-									relaciones
-								</p>
+								<p class="">Arranca de raíz en dolor de su traición sin morir en el intento</p>
+								<div class="mt-2 flex items-center space-x-2">
+									<Star />
+									<p>11:00 a 12:00 Reunión VIP en sala de Zoom</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -188,13 +191,16 @@ import { Calendar, CheckCircle2, Clock, Users, Video } from '@lucide/astro'
 							<div class="flex-1">
 								<div class="mb-2 flex items-center gap-2 text-sm">
 									<Calendar class="h-4 w-4" />
-									<span>Martes 29 de Octubre - 7:00 PM</span>
+									<span>Miércoles 29 de Octubre - 10:00am a 11:00am</span>
 								</div>
-								<h3 class="mb-2 text-xl font-semibold">Procesando el Dolor</h3>
 								<p class="">
 									Herramientas para gestionar las emociones intensas y comenzar el proceso de
 									sanación
 								</p>
+								<div class="mt-2 flex items-center space-x-2">
+									<Star />
+									<p>11:00 a 12:00 Reunión VIP en sala de Zoom</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -211,12 +217,16 @@ import { Calendar, CheckCircle2, Clock, Users, Video } from '@lucide/astro'
 							<div class="flex-1">
 								<div class="mb-2 flex items-center gap-2 text-sm">
 									<Calendar class="h-4 w-4" />
-									<span>Miércoles 30 de Octubre - 7:00 PM</span>
+									<span>Jueves 30 de Octubre - 10:00am a 11:00am</span>
 								</div>
 								<h3 class="mb-2 text-xl font-semibold">Reconstruyendo la Confianza</h3>
 								<p class="">
 									Estrategias para recuperar la confianza en ti mismo y en tus relaciones futuras
 								</p>
+								<div class="mt-2 flex items-center space-x-2">
+									<Star />
+									<p>11:00 a 12:00 Reunión VIP en sala de Zoom</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -233,12 +243,17 @@ import { Calendar, CheckCircle2, Clock, Users, Video } from '@lucide/astro'
 							<div class="flex-1">
 								<div class="mb-2 flex items-center gap-2 text-sm">
 									<Calendar class="h-4 w-4" />
-									<span>Jueves 31 de Octubre - 7:00 PM</span>
+									<span>Viernes 31 de Octubre - 10:00am a 11:00am</span>
 								</div>
-								<h3 class="mb-2 text-xl font-semibold">Transformación y Nuevo Comienzo</h3>
+
 								<p class="">
 									Creando un plan de acción para tu futuro y cerrando el ciclo con esperanza
 								</p>
+
+								<div class="mt-2 flex items-center space-x-2">
+									<Star />
+									<p>11:00 a 12:00 Reunión VIP en sala de Zoom</p>
+								</div>
 							</div>
 						</div>
 					</div>

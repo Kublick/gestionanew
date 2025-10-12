@@ -1,0 +1,192 @@
+---
+import { Calendar, CheckCircle2, Download, Mail, Video } from '@lucide/astro'
+import LayoutCurso from '../layouts/LayoutCurso.astro'
+---
+
+<LayoutCurso title="Gracias por tu pago">
+	<div class="via-background min-h-screen bg-gradient-to-br from-primary/5 to-accent/5">
+		<div class="container mx-auto px-4 py-16 md:py-24">
+			<div class="mx-auto max-w-3xl">
+				{/* Success Message */}
+				<div class="mb-12 text-center">
+					<div
+						class="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-primary/10"
+					>
+						<CheckCircle2 class="h-10 w-10 text-primary" />
+					</div>
+
+					<h1 class="text-balance mb-4 font-poppins text-4xl font-bold md:text-5xl">
+						¡Pago Confirmado!
+					</h1>
+
+					<p class="text-pretty text-muted-foreground text-xl">
+						Gracias por unirte a nuestro taller. Tu proceso de transformación comienza ahora.
+					</p>
+				</div>
+
+				{/* What's Next Card */}
+				<div class="bg-card mb-8 rounded-xl border-2 border-primary/20 p-8 shadow-sm">
+					<h2 class="mb-6 text-2xl font-bold">¿Qué Sigue Ahora?</h2>
+
+					<div class="space-y-6">
+						<div class="flex gap-4">
+							<div class="flex-shrink-0">
+								<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+									<Mail class="h-5 w-5 text-primary" />
+								</div>
+							</div>
+							<div>
+								<h3 class="mb-1 font-semibold">Revisa tu Correo Electrónico</h3>
+								<p class="text-muted-foreground text-sm">
+									Te hemos enviado un correo con todos los detalles del taller.
+								</p>
+							</div>
+						</div>
+
+						<div class="flex gap-4">
+							<div class="flex-shrink-0">
+								<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+									<Video class="h-5 w-5 text-primary" />
+								</div>
+							</div>
+							<div>
+								<h3 class="mb-1 font-semibold">Prepárate para las Sesiones</h3>
+								<p class="text-muted-foreground text-sm">
+									Asegúrate de tener un espacio tranquilo y privado para participar en las 4
+									sesiones por Zoom.
+								</p>
+							</div>
+						</div>
+
+						<div class="flex gap-4">
+							<div class="flex-shrink-0">
+								<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+									<Download class="h-5 w-5 text-primary" />
+								</div>
+							</div>
+							<div>
+								<h3 class="mb-1 font-semibold">Accede al grupo de Whatsapp VIP</h3>
+								<a
+									href="https://chat.whatsapp.com/CYzxBOSj8IJ8D4cPeHXP86"
+									class="border-border inline-flex h-11 items-center justify-center rounded-lg border bg-[#4DE128] px-8 text-sm font-medium transition-colors hover:bg-[#4DE128]/80 hover:text-black/90 hover:shadow-lg"
+								>
+									Grupo VIP Whatsapp
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{/* Schedule Reminder */}
+				<div class="border-border bg-card mb-8 rounded-xl border p-8 shadow-sm">
+					<h2 class="mb-6 text-2xl font-bold">Recordatorio del Programa</h2>
+
+					<div class="space-y-4">
+						<div class="bg-muted/50 flex items-center gap-3 rounded-lg p-4">
+							<div
+								class="text-primary-foreground flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold"
+							>
+								1
+							</div>
+							<div class="flex-1">
+								<div class="text-muted-foreground flex items-center gap-2 text-sm">
+									<Calendar class="h-4 w-4" />
+									<span
+										>Martes 28 de Octubre - 10:00 am ⭐️ <strong> Clase VIP 11:00 am</strong>
+									</span>
+								</div>
+								<p class="font-medium">
+									Arranca de raíz en dolor de su traición sin morir en el intento
+								</p>
+							</div>
+						</div>
+
+						<div class="bg-muted/50 flex items-center gap-3 rounded-lg p-4">
+							<div
+								class="text-primary-foreground flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold"
+							>
+								2
+							</div>
+							<div class="flex-1">
+								<div class="text-muted-foreground flex items-center gap-2 text-sm">
+									<Calendar class="h-4 w-4" />
+									<span
+										>Miércoles 29 de Octubre - 10:00 am ⭐️ <strong> Clase VIP 11:00 am</strong>
+									</span>
+								</div>
+								<p class="font-medium">
+									Herramientas para gestionar las emociones intensas y comenzar el proceso de
+									sanación
+								</p>
+							</div>
+						</div>
+
+						<div class="bg-muted/50 flex items-center gap-3 rounded-lg p-4">
+							<div
+								class="text-primary-foreground flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold"
+							>
+								3
+							</div>
+							<div class="flex-1">
+								<div class="text-muted-foreground flex items-center gap-2 text-sm">
+									<Calendar class="h-4 w-4" />
+									<span
+										>Jueves 30 de Octubre - 10:00 am ⭐️
+
+										<strong> Clase VIP 11:00 am</strong>
+									</span>
+								</div>
+								<p class="font-medium">
+									Estrategias para recuperar la confianza en ti mismo y en tus relaciones futuras
+								</p>
+							</div>
+						</div>
+
+						<div class="bg-muted/50 flex items-center gap-3 rounded-lg p-4">
+							<div
+								class="text-primary-foreground flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold"
+							>
+								4
+							</div>
+							<div class="flex-1">
+								<div class="text-muted-foreground flex items-center gap-2 text-sm">
+									<Calendar class="h-4 w-4" />
+									<span
+										>Viernes 31 de Octubre - 10:00 am ⭐️
+										<strong> Clase VIP 11:00 am</strong>
+									</span>
+								</div>
+								<p class="font-medium">
+									Creando un plan de acción para tu futuro y cerrando el ciclo con esperanza
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{/* Support Section */}
+				<div class="rounded-xl border-2 border-accent/20 bg-accent/5 p-8 text-center">
+					<h2 class="mb-3 text-xl font-bold">¿Necesitas Ayuda?</h2>
+					<p class="text-muted-foreground mb-6">
+						Si tienes alguna pregunta o no recibiste el correo de confirmación, contáctanos de
+						inmediato.
+					</p>
+					<div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
+						<a
+							href="https://api.whatsapp.com/send?phone=5216862349366&text=Necesito%20ayuda%20con%20mi%20pago"
+							class="border-border hover:text-accent-foreground inline-flex h-11 items-center justify-center rounded-lg border bg-transparent px-8 text-sm font-medium transition-colors hover:bg-accent"
+						>
+							Enviar WhatsApp
+						</a>
+						<a
+							href="mailto:psicberenicebastidas@gmail.com"
+							class="border-border hover:text-accent-foreground inline-flex h-11 items-center justify-center rounded-lg border bg-transparent px-8 text-sm font-medium transition-colors hover:bg-accent"
+						>
+							Enviar Correo
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</LayoutCurso>
