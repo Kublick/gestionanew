@@ -478,9 +478,12 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 
 <script type="module">
 	const form = document.getElementById('registro-form')
+	const submitBtn = form.querySelector('button[type="submit"]')
 
 	form.addEventListener('submit', async (e) => {
 		e.preventDefault()
+		submitBtn.disabled = true
+
 		const data = {
 			name: 'elsinnombre',
 			email: form.correo.value,
@@ -496,7 +499,7 @@ import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
 		if (result.ok) {
 			window.location.href = '/registro-gracias'
 		} else {
-			return
+			submitBtn.disabled = false
 		}
 	})
 </script>
