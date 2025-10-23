@@ -1,0 +1,503 @@
+---
+import Image from 'astro/components/Image.astro'
+
+import LogoPurpura from '../assets/logo_purpura_mobile.png'
+import MariposaTop from '../assets/Mariposa_2.png'
+import ChevronDown from '../components/registro/ChevronDown.astro'
+import MariposaR from '../assets/Mariposa_3d_R.png'
+import MariposaL from '../assets/Mariposa_3d_L.png'
+import MariposaCentro from '../assets/Mariposa_centro.png'
+import MariposaAbajo from '../assets/Mariposa_abajo_mobile.png'
+import Mockbolie from '../assets/mock_mobile.png'
+import BereniceMobileVerde from '../assets/foto_verde_berenice_mobile.png'
+import MariposaClase1Mobile from '../assets/mariposa_clase_1_mobile.png'
+import BereniceDesktop from '../assets/berenice_desktop.png'
+import LayoutCurso from '../layouts/LayoutCurso.astro'
+import Clase1Desktop from '../assets/clase_1_desktop.webp'
+import Clase2Desktop from '../assets/Clase_2_desktop.webp'
+import Clase3Desktop from '../assets/Clase_3_desktop.webp'
+import Clase4Desktop from '../assets/Clase_4_desktop.webp'
+import BereniceTerapeutaD from '../assets/berenice_terapeuta_desktop.png'
+---
+
+<LayoutCurso title="Evento via Whatsapp">
+	<section class="grid bg-primary font-poppins lg:grid-cols-2 lg:items-center">
+		<div id="form-element">
+			<Image src={LogoPurpura} alt="Logo" width={154} height={61} class="mx-auto pt-6 md:hidden" />
+			<Image src={MariposaTop} alt="Mariposa Top" class="absolute top-0" />
+
+			<div class="px-6">
+				<div class="mt-6 text-center text-[#3D3553]">
+					<h1 class="text- text-3xl md:text-6xl">Liberate de la <br /> infidelidad y su dolor</h1>
+					<p class="text-sm text-[#70648F] md:pb-8 md:text-2xl">
+						Taller Online - del 28 al 31 de Octubre
+					</p>
+					<div class="my-3 h-0.5 w-full bg-[#70648F]/70 md:hidden"></div>
+
+					<p class="text-xs md:py-8 md:text-2xl lg:px-24">
+						Descubre el <strong>método exacto</strong> para <strong
+							>dejar de sufrir por su traición</strong
+						>, aumentando el autoestima y creando <span class="underline">el amor que mereces</span>
+						 (con o sin él).
+					</p>
+				</div>
+
+				<div
+					class="relative mx-auto mt-5 w-full max-w-xl rounded-2xl border border-[#6D8C82] bg-[#6D8C82]/70 px-4 py-2 pb-6 shadow-lg md:mb-8"
+				>
+					<Image src={MariposaR} alt="Mariposa Top" class="absolute -right-6 -top-4" />
+					<div class="flex items-center justify-center gap-2 space-x-3 py-4">
+						<ChevronDown />
+						<p class="text-center text-sm uppercase text-white md:text-xl">
+							Entra al <strong>grupo de Whatsapp</strong> del TALLER y reserva tu lugar!
+						</p>
+						<ChevronDown />
+					</div>
+					<!-- <form id="registro-form" class="space-y-2 md:space-y-6">
+						<input
+							type="email"
+							name="correo"
+							class="h-10 w-full rounded-lg border-2 border-white bg-transparent px-4 text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-0 md:h-14 md:text-xl"
+							placeholder="correo@correo.com"
+						/>
+						<button
+							class="h-10 w-full cursor-pointer rounded-lg bg-white font-bold uppercase text-[#3D3553] md:h-14 md:text-xl"
+							type="submit">¡Quiero mi lugar gratis!</button
+						>
+					</form> -->
+					<form id="registro-form" class="space-y-2 md:space-y-6">
+						<button
+							class="h-10 w-full cursor-pointer rounded-lg bg-white font-bold uppercase text-[#3D3553] md:h-14 md:text-xl"
+							type="submit">¡Entrar al grupo de Whatssapp</button
+						>
+					</form>
+					<Image src={MariposaL} alt="Mariposa Top" class="absolute -bottom-8 -left-8" />
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="relative flex flex-col items-center bg-[url('/patron_de_mariposas.png')] lg:bg-none"
+		>
+			<Image
+				src={BereniceDesktop}
+				alt="Berenice"
+				class="-mt-8 w-[50%] md:w-[80%]"
+				sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+			/>
+
+			<div
+				class="absolute bottom-0 left-1/2 w-48 -translate-x-1/2 items-center justify-center rounded-full border border-white bg-gradient-to-r from-[#6D8C82]/80 to-[#6D8C82] py-2 text-center text-white shadow-xl md:w-72 md:py-4 lg:rounded-2xl"
+			>
+				<p class="font-bold md:text-xl">Berenice Bastidas</p>
+				<p class="md:text-lg">Psicóloga</p>
+			</div>
+		</div>
+	</section>
+	<section class="grid items-center bg-primary font-poppins lg:grid-cols-2">
+		<div class="p-4 lg:p-12">
+			<div class="rounded-2xl border bg-[#F3F3F3] p-4">
+				<h2 class="px-4 py-4 text-center text-xl font-bold text-[#3D3553] lg:text-3xl">
+					¿Cómo lidiar con el dolor que deja una infelidad de pareja?
+				</h2>
+				<p class="px-4 text-center text-sm text-texto lg:text-xl">
+					La traición de un ser amado es de las cosas más dolorosas que existen... Pero <strong
+						>NO necesitas pasar por eso tu sola.</strong
+					> Existe un método probado y preciso para arrancar de raíz la herida que te dejaron y
+					recuperar tu tranquilidad
+				</p>
+				<p class="py-2 text-center text-xl font-bold text-texto lg:text-2xl">
+					Y todo sin necesidad de:
+				</p>
+				<div class="space-y-4 px-8">
+					<div
+						class="rounded-md bg-gradient-to-r from-[#C5BDDE] to-[#776A9E] p-4 text-center text-sm font-semibold text-white lg:text-xl"
+					>
+						Perder tu dignidad y valor propio
+					</div>
+					<div
+						class="rounded-md bg-gradient-to-r from-[#C5BDDE] to-[#776A9E] p-4 text-center text-sm font-semibold text-white lg:text-xl"
+					>
+						Sin volver a pasar por <br /> una nueva traición
+					</div>
+					<div
+						class="rounded-md bg-gradient-to-r from-[#C5BDDE] to-[#776A9E] p-4 text-center text-sm font-semibold text-white lg:text-xl"
+					>
+						Y si así lo decides, sin sacrificar <br /> ańos de relación
+					</div>
+				</div>
+				<p class="mt-4 text-center text-sm text-texto lg:text-xl">
+					Esto <strong>no es una fórmula mágica</strong> para sanar tus sentimientos de la noche a
+					la mañana, es una <strong
+						>metodologìa basada en años de experiencia y estudio psicológico</strong
+					> y que ha ayudado a cientos de mujeres
+				</p>
+				<div class="relative">
+					<h2 class="px-8 py-4 text-center text-xl font-bold text-[#3D3553] lg:hidden">
+						MUJERES VALIENTES QUE VOLVIERON A SONREÍR Y CONFIAR EN EL AMOR
+					</h2>
+					<Image src={MariposaCentro} alt="Maripsoa Centro" class="absolute -bottom-12 -left-8" />
+				</div>
+			</div>
+		</div>
+		<div class="relative bg-[url('/fondo_logo_verde_mobile.png')] lg:bg-none">
+			<h2
+				class="z-1 absolute left-1/2 top-24 hidden w-[504px] -translate-x-1/2 py-4 text-center text-3xl font-bold text-white lg:block"
+			>
+				MUJERES VALIENTES QUE VOLVIERON A SONREÍR Y CONFIAR EN EL AMOR
+			</h2>
+			<Image src={Mockbolie} alt="mock_mobile" class="w-full" />
+		</div>
+	</section>
+
+	<section class="bg-[#5B7D70] pb-4 lg:bg-[url('/mariposas_bg_s3.png')] lg:pb-0">
+		<div class="grid items-center lg:grid-cols-2">
+			<div>
+				<div
+					class="relative flex min-h-[364px] flex-col items-center bg-[url('/fondo_logo_verde_mobile.png')] lg:bg-none"
+				>
+					<Image
+						src={BereniceMobileVerde}
+						alt="Berenice"
+						height={295}
+						width={206}
+						class="mx-auto"
+					/>
+				</div>
+				<div
+					class="relative mx-auto -mt-16 mb-4 flex w-[85%] items-center justify-center rounded-full bg-gradient-to-r from-[#AAA2C3] to-[#7e71A3] px-6 py-2 text-center font-bold uppercase text-white shadow-xl lg:w-[45%]"
+				>
+					<span class="px-4">EL TALLER ES 100% GRATUITO Y es para ti si...</span>
+					<Image src={MariposaR} alt="Mariposa Top" class="absolute -right-6 -top-6" />
+				</div>
+				<div class="mx-auto space-y-6 py-4">
+					<div
+						class="mx-auto flex w-[85%] items-center space-x-4 rounded-full bg-[#f3f3f3] px-4 py-1 shadow-lg lg:w-[40%]"
+					>
+						<div class="flex w-[48px] flex-shrink-0 items-center justify-center">
+							<svg
+								width="45"
+								height="38"
+								viewBox="0 0 45 38"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-[38px] w-[43px]"
+							>
+								<mask
+									id="mask0_2009_4428"
+									style="mask-type:luminance"
+									maskUnits="userSpaceOnUse"
+									x="0"
+									y="0"
+									width="45"
+									height="38"
+								>
+									<path d="M0.5625 0.302124H44.3333V37.2396H0.5625V0.302124Z" fill="white"></path>
+								</mask>
+								<g mask="url(#mask0_2009_4428)">
+									<path
+										d="M38.4219 1.62508C35.0573 -0.124923 30.9115 -0.00513157 27.4635 1.69799L21.9115 10.474L26.9323 14.2397L22.276 18.823L26.5833 21.9167C26.5833 21.9167 20.5208 29.047 20.4115 29.1459C20.4635 28.948 23 22.4376 23 22.4376L16.0625 19.474L22.6354 15.1772L16.3229 10.724L21.4271 4.75529C17.7604 0.411536 11.3594 -0.942631 6.53124 1.53654C0.119785 4.82299 -0.557298 12.6303 1.83854 17.4845C4.8802 23.6303 11.4844 29.7917 22.375 37.6459C33.3073 29.8542 39.9531 23.7292 43.026 17.599C45.4531 12.7605 44.8177 4.9532 38.4219 1.62508Z"
+										fill="#897DB1"></path>
+								</g>
+							</svg>
+						</div>
+
+						<div class="tracking-tight text-[#7E71A3]">
+							<p class="text-sm font-semibold">Sufres por infidelidad</p>
+							<p class="text-xs">Si el dolor de la traición es reciente y buscas dejar de sufrir</p>
+						</div>
+					</div>
+
+					<div
+						class="mx-auto flex w-[85%] items-center space-x-4 rounded-full bg-[#f3f3f3] px-4 py-1 shadow-lg lg:w-[40%]"
+					>
+						<div class="flex w-[48px] flex-shrink-0 items-center justify-center">
+							<svg
+								width="48"
+								height="40"
+								viewBox="0 0 48 40"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-[40px] w-[43px]"
+							>
+								<mask
+									id="mask0_2009_4754"
+									style="mask-type:luminance"
+									maskUnits="userSpaceOnUse"
+									x="0"
+									y="0"
+									width="48"
+									height="40"
+								>
+									<path d="M0.666687 0H47.3334V39.6927H0.666687V0Z" fill="white"></path>
+								</mask>
+								<g mask="url(#mask0_2009_4754)">
+									<path
+										d="M45.974 9.91664C43.4688 -2.96357 27.7709 -3.18232 23.9011 8.86456C20.0261 -3.18232 4.32815 -2.96357 1.82294 9.91664C-0.447897 21.6093 23.9011 40.0521 23.9011 40.0521C23.9011 40.0521 48.25 21.6093 45.974 9.91664Z"
+										fill="#897DB1"></path>
+								</g>
+							</svg>
+						</div>
+
+						<div class="tracking-tight text-[#7E71A3]">
+							<p class="text-sm font-semibold">Quieres salvar la relación</p>
+							<p class="text-xs">Si deseas sanar el vínculo de pareja y recuperar a tu familia</p>
+						</div>
+					</div>
+
+					<div
+						class="mx-auto flex w-[85%] items-center space-x-4 rounded-full bg-[#f3f3f3] px-4 py-1 shadow-lg lg:w-[40%]"
+					>
+						<div class="flex w-[48px] flex-shrink-0 items-center justify-center">
+							<svg
+								width="43"
+								height="40"
+								viewBox="0 0 43 40"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-[40px] w-[43px]"
+							>
+								<mask
+									id="mask0_2009_5092"
+									style="mask-type:luminance"
+									maskUnits="userSpaceOnUse"
+									x="0"
+									y="0"
+									width="43"
+									height="40"
+								>
+									<path d="M0.833313 0H42.7604V39.8177H0.833313V0Z" fill="white"></path>
+								</mask>
+								<g mask="url(#mask0_2009_5092)">
+									<path
+										d="M39.2917 4.91669C38.7239 4.34898 38.1041 3.83857 37.4375 3.39065C36.7708 2.93753 36.0625 2.55732 35.3229 2.24482C34.5833 1.93232 33.8177 1.69273 33.0312 1.52607C32.2396 1.3594 31.4427 1.27086 30.6406 1.26044C29.8333 1.25003 29.0364 1.31773 28.2448 1.45836C27.4531 1.60419 26.6823 1.81773 25.9323 2.11461C25.1823 2.40628 24.4687 2.76565 23.7864 3.19794C23.1094 3.62503 22.4739 4.11982 21.8906 4.6719C21.0052 3.83336 20.0156 3.14065 18.9271 2.59378C17.8385 2.0469 16.6927 1.66669 15.4948 1.45315C14.2916 1.23961 13.0833 1.20315 11.875 1.34378C10.6614 1.4844 9.49998 1.7969 8.38019 2.28128C7.2604 2.76044 6.22915 3.39586 5.29686 4.17711C4.36457 4.96357 3.55727 5.86461 2.89061 6.88023C2.21873 7.90107 1.70832 8.98961 1.35936 10.1615C1.0104 11.3282 0.833316 12.5209 0.833316 13.7396C0.828108 15.3959 1.14061 16.9896 1.77602 18.5209C2.41144 20.0469 3.31248 21.3959 4.48957 22.5625L21.2083 39.2917C21.3958 39.4792 21.625 39.5729 21.8906 39.5729C22.1562 39.5729 22.3802 39.4792 22.5729 39.2917L39.2917 22.5625C39.8698 21.9844 40.3906 21.3542 40.8437 20.6719C41.2969 19.9948 41.6823 19.2709 41.9948 18.5157C42.3125 17.7604 42.5469 16.9792 42.7083 16.1771C42.8698 15.3698 42.9479 14.5625 42.9479 13.7396C42.9479 12.9219 42.8698 12.1094 42.7083 11.3073C42.5469 10.5 42.3125 9.72399 41.9948 8.96357C41.6823 8.20836 41.2969 7.48961 40.8437 6.80732C40.3906 6.12503 39.8698 5.49482 39.2917 4.91669ZM25.875 21.2084C25.7135 21.3698 25.5521 21.3698 25.3854 21.2084L22.901 18.724C22.8281 18.6563 22.7969 18.5782 22.7969 18.4792C22.7969 18.3802 22.8281 18.3021 22.901 18.2344L25.7552 15.375L28.7344 18.3542L25.875 21.2084ZM36.5521 18.724L34.0677 21.2084C33.9062 21.3698 33.7396 21.3698 33.5781 21.2084L22.901 10.5313C22.8281 10.4636 22.7969 10.3854 22.7969 10.2865C22.7969 10.1927 22.8281 10.1094 22.901 10.0417L25.3854 7.55732C25.4531 7.4844 25.5364 7.45315 25.6302 7.45315C25.7291 7.45315 25.8125 7.4844 25.875 7.55732L36.5521 18.2344C36.7135 18.3959 36.7135 18.5625 36.5521 18.724ZM36.5521 10.5313L33.6979 13.3907L30.7187 10.4115L33.5781 7.55732C33.6458 7.4844 33.7239 7.44794 33.8229 7.45315C33.9166 7.45315 34 7.48961 34.0677 7.55732L36.5521 10.0417C36.7135 10.2032 36.7135 10.3698 36.5521 10.5313Z"
+										fill="#897DB1"></path>
+								</g>
+							</svg>
+						</div>
+
+						<div class="tracking-tight text-[#7E71A3]">
+							<p class="text-sm font-semibold">Estás lista para sanar</p>
+							<p class="text-xs">
+								Sana tus heridas del pasado para avansar sola o atraer una pareja que te valore
+							</p>
+						</div>
+					</div>
+					<div class="mx-auto h-[1px] w-[70%] bg-gray-300 lg:hidden"></div>
+				</div>
+			</div>
+			<div>
+				<p
+					class="mx-auto w-[70%] text-center text-xs text-white lg:w-[536px] lg:text-2xl lg:leading-relaxed"
+				>
+					Por primera vez un evento donde podrás ser acompañada y guiada de forma profesional para
+					sanar las heridas de tu corazón sin juicio ni culpa
+				</p>
+				<button
+					class="mx-auto block w-[80%] rounded-full border border-white bg-[#7E71A3] p-4 lg:my-8 lg:w-[625px]"
+				>
+					<a
+						href="#form-element"
+						class="text-center text-xl font-bold uppercase text-white lg:text-4xl"
+					>
+						¡Registrate ahora!
+					</a>
+				</button>
+				<div class="relative pb-6">
+					<p class="mx-auto w-[70%] pt-4 text-center text-xs text-white lg:text-xl">
+						Asegura tu lugar y recibirás en tu correo tu ticket de entrada al evento digital
+					</p>
+					<Image src={MariposaAbajo} alt="Mariposa Top" class="absolute -bottom-4" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-[#f3f3f3] py-6 lg:bg-[url('/fondo_mariposa_desktop_blanco.png')]">
+		<h2
+			class="mx-auto w-[80%] text-center text-xl font-bold uppercase text-[#554871] lg:pt-8 lg:text-3xl"
+		>
+			esto es lo que vas a aprender en las 4 clases del taller online
+		</h2>
+		<p class="py-2 text-center lg:text-2xl">(del 23 al 31 de Octubre)</p>
+		<div class="grid items-center gap-8 lg:grid-cols-2 lg:pt-8">
+			<div class="relative">
+				<Image
+					src={Clase1Desktop}
+					alt="Clase 1 desktop mock"
+					width={593}
+					height={348}
+					class="mx-auto h-[188px] w-[321px] rounded-3xl object-cover md:h-[348px] md:w-[593px]"
+					sizes="(max-width: 768px) 321px, 593px"
+				/>
+
+				<h2
+					class="mx-auto w-[80%] text-center text-xl font-bold uppercase text-[#554871] lg:mt-4 lg:text-2xl"
+				>
+					CLASE #1 (Octubre 28)
+				</h2>
+				<p class="mx-auto px-4 text-center text-lg text-[#554871] lg:w-[50%] lg:pt-4 lg:text-2xl">
+					Arranca de Raíz el dolor de su traición sin morir en el intento
+				</p>
+				<Image
+					src={MariposaClase1Mobile}
+					alt="Mariposa Top"
+					class="absolute -bottom-4 right-4 lg:hidden"
+				/>
+			</div>
+
+			<div class="relative">
+				<Image
+					src={Clase2Desktop}
+					alt="Clase 2 desktop mock"
+					width={593}
+					height={348}
+					class="mx-auto h-[188px] w-[321px] rounded-3xl object-cover md:h-[348px] md:w-[593px]"
+					sizes="(max-width: 768px) 321px, 593px"
+				/>
+				<h2
+					class="mx-auto w-[80%] text-center text-xl font-bold uppercase text-[#554871] lg:mt-4 lg:text-2xl"
+				>
+					CLASE #2 (Octubre 29)
+				</h2>
+				<p
+					class="px-4 text-center text-lg text-[#554871] lg:mx-auto lg:w-[50%] lg:pt-4 lg:text-2xl"
+				>
+					Conoce los indicadores para saber si perdonar o irte para siempre
+				</p>
+				<Image src={MariposaAbajo} alt="Mariposa Top" class="absolute -bottom-4 lg:hidden" />
+			</div>
+			<div class="mt-4 pt-4">
+				<Image
+					src={Clase3Desktop}
+					alt="Clase 3 desktop mock"
+					width={593}
+					height={348}
+					class="mx-auto h-[188px] w-[321px] rounded-3xl object-cover md:h-[348px] md:w-[593px]"
+					sizes="(max-width: 768px) 321px, 593px"
+				/>
+				<div class="relative">
+					<h2
+						class="mx-auto w-[80%] text-center text-xl font-bold uppercase text-[#554871] lg:mt-4 lg:text-2xl"
+					>
+						CLASE #3 (Octubre 30)
+					</h2>
+					<p class="mx-auto w-[50%] px-4 text-center text-lg text-[#554871] lg:pt-4 lg:text-2xl">
+						Cómo pasar de la Herida a la libertad emocional
+					</p>
+					<Image
+						src={MariposaClase1Mobile}
+						alt="Mariposa Top"
+						class="absolute -top-2 right-1 lg:hidden"
+					/>
+				</div>
+			</div>
+			<div class="relative pt-4">
+				<Image
+					src={Clase4Desktop}
+					alt="Clase 4 desktop mock"
+					width={593}
+					height={348}
+					class="mx-auto h-[188px] w-[321px] rounded-3xl object-cover md:h-[348px] md:w-[593px]"
+					sizes="(max-width: 768px) 321px, 593px"
+				/>
+				<h2
+					class="mx-auto w-[80%] text-center text-xl font-bold uppercase text-[#554871] lg:mt-4 lg:text-2xl"
+				>
+					CLASE #4 (Octubre 31)
+				</h2>
+				<p
+					class="px-4 text-center text-lg text-[#554871] lg:mx-auto lg:w-[50%] lg:pt-4 lg:text-2xl"
+				>
+					7 pasoss para blindarte y que no te vuelva a pasar
+				</p>
+				<Image src={MariposaAbajo} alt="Mariposa Top" class="absolute -bottom-4 lg:hidden" />
+			</div>
+		</div>
+		<div class="px-8 py-6 text-sm">
+			<p class="lg:w-[8 0%] mx-auto text-center text-[#554871] lg:text-3xl">
+				Prepárate para vivir un recorrido transformador donde <strong>sanarás tus heridas</strong>
+				 descubrirás tu verdadera fueraza interior y aprenderás <strong
+					>herramientas prácticas</strong
+				> para <span class="underline">liberarte</span> del dolor y construir la vida emocional que
+				mereces.
+			</p>
+		</div>
+	</section>
+	<section class="bg-[#70648F] py-6 lg:py-12">
+		<div class="grid items-center lg:grid-cols-2">
+			<div>
+				<h2 class="text-center text-white lg:text-4xl">Soy Berenice Bastidas,</h2>
+				<h2 class="text-center text-2xl font-semibold uppercase text-white lg:mt-2 lg:text-5xl">
+					tu nueva psicóloga
+				</h2>
+				<Image
+					src={BereniceTerapeutaD}
+					alt="Clase 4 desktop mock"
+					class="mx-auto lg:mt-8"
+					sizes="(max-width: 768px) 321px, 593px"
+				/>
+			</div>
+			<div>
+				<div
+					class="mx-6 rounded-lg border-2 border-[#6D8C82] bg-white px-3 py-2 text-center text-[#554871] shadow-lg lg:mx-auto lg:w-[70%] lg:px-6 lg:text-xl lg:leading-relaxed"
+				>
+					<p>
+						He acompañado a mujeres que han vivido el dolor de una <strong>infidelidad</strong> o
+						ruptura amorosa.
+					</p>
+					<p class="py-2">
+						He visto cómo al <strong>recuperar su confianza,</strong> poner límites y ganar la
+						claridad, logran decidir con fuerza si reconstruir la realción o soltarla para cuidar su
+						paz mental.
+					</p>
+					<p class="py-2">También comparto estas herramientas con colegas de la salud</p>
+					<p>
+						Mas de <stron>200 alumnos en 14 países</stron> han pasado por mis formaciones,
+						multiplicando este impacto en la vida de muchas más personas
+					</p>
+				</div>
+				<p
+					class="mx-6 py-4 text-center text-lg font-bold text-white lg:mx-auto lg:w-[70%] lg:text-3xl"
+				>
+					¿Lista para dar el primer paso hacia tu sanación?
+				</p>
+
+				<a href="#form-element">
+					<button
+						class="mx-auto block w-[80%]
+				 rounded-full border border-white bg-gradient-to-b from-[#53786A]/80 to-[#5A8072] p-4"
+						type="button"
+					>
+						<p class="text-center text-xl font-bold uppercase text-white lg:text-3xl">
+							¡Registrarme ahora!
+						</p>
+					</button>
+				</a>
+				<p class="py-2 text-center text-xs text-white lg:text-base">
+					Confirma tu asistencia y unte al grupo oficial del evento
+				</p>
+			</div>
+		</div>
+	</section>
+</LayoutCurso>
+
+<script type="module">
+	const redirectUrl = 'https://chat.whatsapp.com/EGeeP4lKlUJFcM1EHBsQaD'
+	const form = document.getElementById('registro-form')
+
+	if (!form) {
+		console.warn('registro-form not found')
+	} else {
+		// handle form submit (covers Enter + button)
+		form.addEventListener('submit', (e) => {
+			e.preventDefault() // stop normal submission/navigation
+			// optionally disable the button to avoid double clicks
+			const btn = form.querySelector('button[type="submit"]')
+			if (btn) btn.disabled = true
+
+			// redirect after preventing default
+			window.location.href = redirectUrl
+		})
+	}
+</script>

@@ -10,6 +10,7 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/svelte": "^7.2.0",
 		"@astrojs/tailwind": "^6.0.2",
 		"@lucide/astro": "^0.544.0",
 		"@sentry/astro": "^7.90.0",
@@ -17,7 +18,9 @@
 		"astro": "^5.13.7",
 		"astro-font": "^0.0.28",
 		"blaze-slider": "^1.9.3",
-		"tailwindcss": "^3.0.24"
+		"svelte": "^5.41.2",
+		"tailwindcss": "^3.0.24",
+		"typescript": "^5.9.3"
 	},
 	"devDependencies": {
 		"prettier": "^3.0.3",
