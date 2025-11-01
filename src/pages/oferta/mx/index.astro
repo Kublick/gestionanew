@@ -1,10 +1,10 @@
 ---
-import Header from '../../components/Header.astro'
-import Layout from '../../layouts/Layout.astro'
 import { Image } from 'astro:assets'
-import Logo from '../../assets/logo_planes.svg'
-import PlanCard from '../../components/PlanCard.astro'
-import Footer from '../../components/Footer.astro'
+import Logo from '../../../assets/logo_planes.svg'
+import Layout from '../../../layouts/Layout.astro'
+import Header from '../../../components/Header.astro'
+import Footer from '../../../components/Footer.astro'
+import PlanCard from '../../../components/PlanCard.astro'
 ---
 
 <Layout title="Planes Terapia Psicologica">
@@ -41,32 +41,32 @@ import Footer from '../../components/Footer.astro'
 		<div class="flex flex-col gap-8 pb-8 md:flex-row md:gap-16 md:pb-48">
 			<PlanCard
 				plan="(Plan Lite)"
-				price="$60 dlls"
+				price="$1,000 pesos"
 				description={['Una sesión individual de terapia']}
-				link={'https://buy.stripe.com/eVq5kD6aF9dP01zbbLe7m0r'}
+				link={'https://buy.stripe.com/aFa00jfLf89LaGd7Zze7m0o'}
 			/>
 			<div class="md:translate-y-24">
 				<PlanCard
 					plan="(Plan Plus)"
-					price="$250 dlls"
+					price="$4,500 pesos"
 					description={[
 						'5 sesiones individuales de terapia.',
 						'Acompañamiento de mensajería durante el proceso.'
 					]}
-					link="https://buy.stripe.com/4gM14n2Yt4XzdSp6Vve7m0s"
+					link="https://buy.stripe.com/6oU00j2YtfCd9C9gw5e7m0u"
 					selected
 				/>
 			</div>
 			<div>
 				<PlanCard
 					plan="(Plan Total)"
-					price="$450 dlls"
+					price="$8,500 pesos"
 					description={[
 						'10 sesiones individuales de terapia.',
 						'Acompañamiento de mensajería durante el proceso.',
 						'2 llamadas de emergencia de 15 minutos cada una'
 					]}
-					link={'https://buy.stripe.com/6oU9ATbuZahT6pXbbLe7m0t'}
+					link={'https://buy.stripe.com/5kQ6oHdD761DeWt7Zze7m0w'}
 				/>
 			</div>
 		</div>
