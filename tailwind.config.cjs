@@ -8,7 +8,16 @@ module.exports = {
 				secondary: '#EAE6F4',
 				accent: '#6D8C82',
 				whatsapp: '#25d366',
-				texto: '#70648F'
+				texto: '#70648F',
+				background: '#FDFBFF',
+				foreground: '#0A0011',
+				muted: '#F2EAF6',
+				'muted-foreground': '#6E5E78',
+				'accent-workshop': '#B26AD9',
+				card: '#FFFFFF',
+				'card-foreground': '#1D0B29',
+				'primary-workshop': '#570A74',
+				'primary-foreground': '#FFFFFF'
 			},
 			fontFamily: {
 				bebas: ['Bebas Neue', 'sans-serif'],

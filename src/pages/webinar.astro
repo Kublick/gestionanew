@@ -1,0 +1,478 @@
+---
+import { Sparkles, ArrowRight, Play, Brain } from '@lucide/astro'
+import LayoutCurso from '../layouts/LayoutCurso.astro'
+---
+
+<LayoutCurso title="Webinar">
+	<div class="min-h-screen bg-background">
+		{/* Hero Section - Split Layout */}
+		<section
+			class="relative overflow-hidden bg-gradient-to-br from-primary-workshop/5 via-background to-primary-workshop/10 px-4 py-24 sm:px-6 lg:px-8"
+		>
+			<div class="mx-auto max-w-7xl">
+				<div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+					<div class="space-y-8">
+						<div
+							class="inline-flex items-center gap-2 rounded-full bg-primary-workshop/10 px-4 py-2 text-sm font-medium text-primary-workshop"
+						>
+							<Sparkles class="h-4 w-4" />
+							 Workshop Terapéutico
+						</div>
+						<h1
+							class="text-balance text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl"
+						>
+							Sana y Supera La Infidelidad
+						</h1>
+						<p class="text-pretty text-lg text-muted-foreground sm:text-xl">
+							Tu vida no está rota… Solo tu corazón pero juntos vamos a arreglarlo, aprendiendo a
+							dejar de sufrir por amor.
+						</p>
+
+						<button
+							class="purchase-btn flex flex-col gap-2 rounded-lg bg-primary-workshop p-3 text-primary-foreground sm:flex-row"
+						>
+							Confirmo mi asistencia
+							<ArrowRight class="h-5 w-5" />
+						</button>
+
+						<div class="flex items-center gap-8 pt-4">
+							<div class="text-sm">
+								<div class="font-semibold text-foreground">2,000+ Participantes</div>
+								<div class="text-muted-foreground">Han encontrado esperanza aquí</div>
+							</div>
+						</div>
+					</div>
+					<div class="relative">
+						<div
+							class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-primary-workshop/20 to-transparent blur-3xl"
+						>
+						</div>
+						<div class="border-border relative rounded-3xl border bg-card p-8 shadow-2xl">
+							<div class="space-y-6">
+								<div class="flex items-center gap-4">
+									<div
+										class="flex h-12 w-12 items-center justify-center rounded-full bg-primary-workshop/10"
+									>
+										<Brain class="h-6 w-6 text-primary-workshop" />
+									</div>
+									<div>
+										<div class="font-semibold text-foreground">Terapia Grupal en Vivo</div>
+										<div class="text-sm text-muted-foreground">
+											3 sesiones por Zoom, estilo taller interactivo
+										</div>
+									</div>
+								</div>
+								<div
+									class="h-48 rounded-xl bg-gradient-to-br from-primary-workshop/5 to-primary-workshop/10 p-6"
+								>
+									<div class="space-y-3">
+										<div class="h-3 w-3/4 rounded bg-primary-workshop/20"></div>
+										<div class="bg-primary-workshop/15 h-3 w-1/2 rounded"></div>
+										<div class="h-3 w-5/6 rounded bg-primary-workshop/20"></div>
+										<div class="bg-primary-workshop/15 h-3 w-2/3 rounded"></div>
+									</div>
+								</div>
+								<div class="flex gap-2">
+									<div class="h-2 flex-1 rounded-full bg-primary-workshop"></div>
+									<div class="h-2 flex-1 rounded-full bg-primary-workshop/30"></div>
+									<div class="h-2 flex-1 rounded-full bg-primary-workshop/30"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Benefits Grid */}
+		<section class="px-6 py-20 lg:px-12">
+			<div class="mx-auto max-w-7xl">
+				<h2
+					class="text-balance mb-4 text-center font-serif text-3xl font-bold text-foreground lg:text-4xl"
+				>
+					Transforma tu dolor en crecimiento
+				</h2>
+				<p class="text-pretty mb-12 text-center text-lg leading-relaxed text-muted-foreground">
+					Sé parte del único workshop terapéutico para sanar tu corazón
+				</p>
+				<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+					{
+						[
+							{ title: 'Calmar tu ansiedad', icon: '🌊' },
+							{ title: 'Recuperar tu autoestima', icon: '✨' },
+							{ title: 'Dejar de arrastrar el pasado', icon: '🎈' },
+							{ title: 'Liberarte de la ira y el rencor', icon: '🕊️' },
+							{ title: 'Recuperar tu confianza y tu paz', icon: '🌸' },
+							{ title: 'Construir una nueva versión de ti', icon: '🦋' }
+						].map((benefit) => (
+							<div class="border-border group rounded-lg border bg-card p-6 transition-all hover:border-primary-workshop/50 hover:shadow-lg">
+								<div class="mb-3 text-4xl">{benefit.icon}</div>
+								<h3 class="text-lg font-semibold leading-relaxed text-card-foreground">
+									{benefit.title}
+								</h3>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		{/* What's Included - Bento Grid */}
+		<section class="bg-accent-workshop/30 px-6 py-20 lg:px-12">
+			<div class="mx-auto max-w-7xl">
+				<h2
+					class="text-balance mb-12 text-center font-serif text-3xl font-bold text-foreground lg:text-4xl"
+				>
+					Todo lo que incluye tu inscripción
+				</h2>
+				<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+					{/* Large Card */}
+					<div class="border-border rounded-2xl border-2 bg-card p-8 md:col-span-2 md:row-span-2">
+						<div
+							class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary-workshop/10"
+						>
+							<svg
+								class="h-8 w-8 text-primary-workshop"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width={2}
+									d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="mb-3 text-2xl font-bold text-card-foreground">Terapia grupal en vivo</h3>
+						<p class="leading-relaxed text-muted-foreground">
+							3 sesiones por Zoom, estilo taller interactivo donde compartiremos y sanaremos juntos.
+							Un espacio seguro para expresarte y conectar con otras personas que están pasando por
+							lo mismo.
+						</p>
+					</div>
+
+					{/* Small Cards */}
+					<div class="border-border rounded-2xl border-2 bg-card p-6">
+						<div
+							class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-workshop/10"
+						>
+							<svg
+								class="h-6 w-6 text-primary-workshop"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width={2}
+									d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+								></path>
+							</svg>
+						</div>
+						<h3 class="mb-2 text-lg font-semibold text-card-foreground">Cuaderno terapéutico</h3>
+						<p class="text-sm leading-relaxed text-muted-foreground">
+							Ejercicios y herramientas en PDF
+						</p>
+					</div>
+
+					<div class="border-border rounded-2xl border-2 bg-card p-6">
+						<div
+							class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-workshop/10"
+						>
+							<svg
+								class="h-6 w-6 text-primary-workshop"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width={2}
+									d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="mb-2 text-lg font-semibold text-card-foreground">Comunidad WhatsApp</h3>
+						<p class="text-sm leading-relaxed text-muted-foreground">30 días de apoyo emocional</p>
+					</div>
+
+					<div class="border-border rounded-2xl border-2 bg-card p-6 md:col-span-2">
+						<div
+							class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-workshop/10"
+						>
+							<svg
+								class="h-6 w-6 text-primary-workshop"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width={2}
+									d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="mb-2 text-lg font-semibold text-card-foreground">Grabación disponible</h3>
+						<p class="text-sm leading-relaxed text-muted-foreground">
+							Acceso a las repeticiones si no puedes estar en vivo
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Curriculum - Accordion Style */}
+		<section class="px-6 py-20 lg:px-12">
+			<div class="mx-auto max-w-4xl">
+				<h2
+					class="text-balance mb-12 text-center font-serif text-3xl font-bold text-foreground lg:text-4xl"
+				>
+					Programa del Workshop
+				</h2>
+				<div class="space-y-4">
+					{/* Module 1 */}
+					<div class="border-border overflow-hidden rounded-2xl border-2 bg-card">
+						<div class="bg-primary-workshop/5 p-6">
+							<div class="flex items-center gap-4">
+								<div
+									class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary-workshop text-lg font-bold text-primary-foreground"
+								>
+									1
+								</div>
+								<h3 class="text-xl font-bold text-card-foreground lg:text-2xl">
+									Entendiendo el impacto de la infidelidad
+								</h3>
+							</div>
+						</div>
+						<div class="p-6">
+							<ul class="space-y-3">
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 ¿Por qué duele tanto? El trauma de la traición.
+								</li>
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 Tipos de infidelidad y su efecto en la pareja.
+								</li>
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 ¿Qué pasa en el cerebro y el corazón tras una infidelidad?
+								</li>
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 Validando tus emociones: lo que sientes es normal.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					{/* Module 2 */}
+					<div class="border-border overflow-hidden rounded-2xl border-2 bg-card">
+						<div class="bg-primary-workshop/5 p-6">
+							<div class="flex items-center gap-4">
+								<div
+									class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary-workshop text-lg font-bold text-primary-foreground"
+								>
+									2
+								</div>
+								<h3 class="text-xl font-bold text-card-foreground lg:text-2xl">
+									El torbellino emocional
+								</h3>
+							</div>
+						</div>
+						<div class="p-6">
+							<ul class="space-y-3">
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 Manejo del dolor, la rabia y la tristeza.
+								</li>
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 Cómo parar los pensamientos intrusivos y la obsesión.
+								</li>
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 El miedo a no ser suficiente: sanando la autoestima herida.
+								</li>
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 Ansiedad y desconfianza: cómo calmarlas día a día.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					{/* Module 3 */}
+					<div class="border-border overflow-hidden rounded-2xl border-2 bg-card">
+						<div class="bg-primary-workshop/5 p-6">
+							<div class="flex items-center gap-4">
+								<div
+									class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary-workshop text-lg font-bold text-primary-foreground"
+								>
+									3
+								</div>
+								<h3 class="text-xl font-bold text-card-foreground lg:text-2xl">
+									Decidir el camino
+								</h3>
+							</div>
+						</div>
+						<div class="p-6">
+							<ul class="space-y-3">
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 ¿Perdonar o soltar? Claves para tomar la mejor decisión.
+								</li>
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 Señales de que la relación puede sanar… o no.
+								</li>
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 Cómo hablar con tu pareja después de la infidelidad.
+								</li>
+								<li class="flex items-start gap-3 leading-relaxed text-muted-foreground">
+									<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-workshop"
+									></span>
+									 Poner límites sanos sin miedo a perder.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Bonuses - Side by Side */}
+		<section
+			class="to-accent-worbg-accent-workshop/10 bg-gradient-to-br from-primary-workshop/5 px-6 py-20 lg:px-12"
+		>
+			<div class="mx-auto max-w-6xl">
+				<div class="mb-12 text-center">
+					<div
+						class="mb-4 inline-block rounded-full bg-accent-workshop px-6 py-2 text-sm font-bold uppercase tracking-wide text-primary-foreground"
+					>
+						Bonos Exclusivos
+					</div>
+					<h2 class="text-balance font-serif text-3xl font-bold text-foreground lg:text-4xl">
+						Solo para los primeros en inscribirse
+					</h2>
+				</div>
+				<div class="grid gap-6 lg:grid-cols-2">
+					<div class="rounded-2xl border-2 border-primary-workshop bg-card p-8 shadow-lg">
+						<div
+							class="mb-4 inline-block rounded-full bg-primary-workshop px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary-foreground"
+						>
+							Solo 3 primeros
+						</div>
+						<h3 class="mb-3 text-2xl font-bold text-card-foreground">
+							Sesión terapéutica individual
+						</h3>
+						<p class="leading-relaxed text-muted-foreground">
+							Con Psicóloga Berenice Bastidas de 45 minutos. Un espacio privado para trabajar en tus
+							necesidades específicas.
+						</p>
+					</div>
+
+					<div class="rounded-2xl border-2 border-primary-workshop bg-card p-8 shadow-lg">
+						<div
+							class="mb-4 inline-block rounded-full bg-primary-workshop px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary-foreground"
+						>
+							Solo 20 primeras
+						</div>
+						<h3 class="mb-3 text-2xl font-bold text-card-foreground">eBook guía fácil</h3>
+						<p class="leading-relaxed text-muted-foreground">
+							Para afrontar la infidelidad con herramientas prácticas que puedes aplicar
+							inmediatamente en tu día a día.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Final CTA - Full Width */}
+		<section class="bg-primary-workshop px-6 py-20 text-primary-foreground lg:px-12">
+			<div class="mx-auto max-w-4xl text-center">
+				<h2 class="text-balance mb-6 font-serif text-3xl font-bold lg:text-5xl">
+					No dejes que el dolor del pasado defina tu futuro
+				</h2>
+				<p class="text-pretty mb-8 text-lg leading-relaxed opacity-90 lg:text-xl">
+					Únete a este workshop transformador y comienza tu camino hacia la sanación
+				</p>
+				<button
+					class="purchase-btn mb-6 h-16 w-full max-w-md rounded-lg bg-secondary px-8 text-lg font-semibold text-foreground transition-colors hover:bg-secondary/90"
+				>
+					¡Sí quiero participar!
+				</button>
+				<div class="flex flex-wrap items-center justify-center gap-4 text-sm opacity-90">
+					<span>16, 17 y 18 de Noviembre</span>
+					<span>•</span>
+					<span>7:00 pm hora de México</span>
+					<span>•</span>
+					<span class="font-bold">Solo $9.47 USD</span>
+				</div>
+			</div>
+		</section>
+	</div>
+</LayoutCurso>
+
+<script is:inline>
+	const mexicoUrl = 'https://buy.stripe.com/cNiaEXeHbblX01z1Bbe7m0y'
+	const internationalUrl = 'https://buy.stripe.com/bJebJ1dD775HdSp2Ffe7m0x'
+
+	async function detectCountry() {
+		try {
+			const params = new URLSearchParams(location.search)
+			const override = params.get('country') || localStorage.getItem('debugCountry')
+			if (override) return String(override).toUpperCase()
+		} catch (e) {
+			/* ignore in SSR */
+		}
+
+		try {
+			const res = await fetch('https://ipapi.co/json/')
+			if (res.ok) {
+				const json = await res.json()
+				if (json && json.country) return String(json.country).toUpperCase()
+			}
+		} catch (err) {
+			/* fallback */
+		}
+
+		const lang = navigator.language || navigator.userLanguage || ''
+		if (lang.toLowerCase().includes('mx')) return 'MX'
+		return 'INTL'
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		document.querySelectorAll('.purchase-btn').forEach((btn) => {
+			btn.addEventListener('click', async (e) => {
+				e.preventDefault()
+				if (btn.disabled) return
+				btn.disabled = true
+
+				const country = await detectCountry()
+				const target = country === 'MX' ? mexicoUrl : internationalUrl
+
+				// optional: small delay to show disabled state
+				window.location.href = target
+			})
+		})
+	})
+</script>
