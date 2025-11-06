@@ -29,7 +29,7 @@ import LayoutCurso from '../layouts/LayoutCurso.astro'
 						</p>
 
 						<button
-							class="purchase-btn flex flex-col gap-2 rounded-lg bg-primary-workshop p-3 text-primary-foreground sm:flex-row"
+							class="purchase-btn flex w-full items-center justify-center gap-2 rounded-lg bg-primary-workshop p-3 text-primary-foreground sm:flex-row md:w-60"
 						>
 							Confirmo mi asistencia
 							<ArrowRight class="h-5 w-5" />
@@ -37,6 +37,9 @@ import LayoutCurso from '../layouts/LayoutCurso.astro'
 
 						<div class="flex items-center gap-8 pt-4">
 							<div class="text-sm">
+								<div class="mb-2 font-semibold text-foreground">
+									¡Inscribete al Workshop Terapéutico por solo <stron>$9.47 USD</stron>!
+								</div>
 								<div class="font-semibold text-foreground">2,000+ Participantes</div>
 								<div class="text-muted-foreground">Han encontrado esperanza aquí</div>
 							</div>
@@ -87,10 +90,14 @@ import LayoutCurso from '../layouts/LayoutCurso.astro'
 		{/* Benefits Grid */}
 		<section class="px-6 py-20 lg:px-12">
 			<div class="mx-auto max-w-7xl">
+				<p class="text-pretty mb-4 text-center text-lg leading-relaxed text-muted-foreground">
+					Descubre cómo cerrar este capítulo con amor propio y abrirte a nuevas oportunidades.
+				</p>
 				<h2
 					class="text-balance mb-4 text-center font-serif text-3xl font-bold text-foreground lg:text-4xl"
 				>
-					Transforma tu dolor en crecimiento
+					Este momento no tiene que ser el final de tu historia, hoy puedes hacer que sea el
+					comienzo de tu mejor temporada.
 				</h2>
 				<p class="text-pretty mb-12 text-center text-lg leading-relaxed text-muted-foreground">
 					Sé parte del único workshop terapéutico para sanar tu corazón
@@ -123,7 +130,7 @@ import LayoutCurso from '../layouts/LayoutCurso.astro'
 				<h2
 					class="text-balance mb-12 text-center font-serif text-3xl font-bold text-foreground lg:text-4xl"
 				>
-					Todo lo que incluye tu inscripción
+					Todo lo que incluye este workshop
 				</h2>
 				<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
 					{/* Large Card */}
@@ -449,6 +456,7 @@ import LayoutCurso from '../layouts/LayoutCurso.astro'
 			const res = await fetch('https://ipapi.co/json/')
 			if (res.ok) {
 				const json = await res.json()
+				console.log(json)
 				if (json && json.country) return String(json.country).toUpperCase()
 			}
 		} catch (err) {
