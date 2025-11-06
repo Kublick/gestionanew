@@ -3,17 +3,20 @@ import { AstroFont } from 'astro-font'
 
 interface Props {
 	title: string
+	description?: string
 }
 
-const { title } = Astro.props
+const { title, description } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Evento Liberate de la
-infidelidad y su dolor " />
+		<meta
+			name="description"
+			content={description ? description : 'Evento Liberate de la infidelidad y su dolor'}
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -21,7 +24,7 @@ infidelidad y su dolor " />
 		<link rel="manifest" href="/site.webmanifest" />
 		<meta property="og:url" content="https://www.gestionatupsicologia.com/registro/" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Evento" />
+		<meta property="og:title" content={title} />
 		<meta property="og:description" content="Evento Liberate de la
 infidelidad y su dolor " />
 		<meta property="og:image" content="" />

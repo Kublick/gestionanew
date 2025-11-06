@@ -3,7 +3,7 @@ import { Sparkles, ArrowRight, Play, Brain } from '@lucide/astro'
 import LayoutCurso from '../layouts/LayoutCurso.astro'
 ---
 
-<LayoutCurso title="Webinar">
+<LayoutCurso title="Workshop" description="Workshop taller infidelidad">
 	<div class="min-h-screen bg-background">
 		{/* Hero Section - Split Layout */}
 		<section
@@ -456,7 +456,7 @@ import LayoutCurso from '../layouts/LayoutCurso.astro'
 			const res = await fetch('https://ipapi.co/json/')
 			if (res.ok) {
 				const json = await res.json()
-				console.log(json)
+
 				if (json && json.country) return String(json.country).toUpperCase()
 			}
 		} catch (err) {
