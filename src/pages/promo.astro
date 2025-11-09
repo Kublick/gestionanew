@@ -1,0 +1,625 @@
+---
+import { CircleCheck, Heart, MessageCircleMore, Video, Users, HandHeart } from '@lucide/astro'
+import LayoutCurso from '../layouts/LayoutCurso.astro'
+import { Image } from 'astro:assets'
+import Visa from '../assets/visa.svg'
+import Mastercard from '../assets/mastercard.svg'
+import Amex from '../assets/amex.svg'
+import BereniceHero from '../assets/workshop_hero.png'
+import Slide1 from '../assets/slide1.png'
+import Slide2 from '../assets/slide2.png'
+import BerePromo from '../assets/bere-promo.png'
+import AccordionPromo from '../components/AccordionPromo.astro'
+import CtaPrecio from '../components/workshop/ctaprecio.astro'
+---
+
+<LayoutCurso title="Workshop" description="Workshop taller infidelidad">
+	<div class="min-h-screen bg-background">
+		{/* Hero Section - Split Layout */}
+		<section
+			class="relative overflow-hidden bg-gradient-to-br from-primary-workshop/5 via-background to-primary-workshop/10 px-4 py-24 sm:px-6 lg:px-8"
+		>
+			<div class="mx-auto max-w-7xl">
+				<div>
+					<div class="flex flex-col items-center space-y-8">
+						<h1 class="text-balance text-5xl font-bold text-foreground sm:text-7xl lg:text-9xl">
+							Sana y Supera La Infidelidad
+						</h1>
+						<p
+							class="text-pretty text-center text-xl text-muted-foreground sm:text-2xl lg:text-4xl"
+						>
+							Tu vida no está rota… Solo tu corazón pero juntos vamos a repararlo. para que logres
+							sentir paz y puedas dejar de sufrir
+						</p>
+
+						<p
+							class="text-pretty text-center text-xl text-muted-foreground sm:text-2xl lg:text-4xl"
+						>
+							Te invito a formar parte de mi
+						</p>
+						<h1
+							class="text-balance pb-8 text-5xl font-semibold text-foreground sm:text-5xl lg:text-7xl"
+						>
+							Club Terapéutico
+						</h1>
+					</div>
+					<div class="flex justify-center">
+						<CtaPrecio />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-[#271647]">
+			<div class="mx-auto max-w-7xl px-4 md:px-0">
+				<h1
+					class="container mx-auto py-6 text-center text-5xl font-bold text-primary-foreground sm:text-8xl md:py-12 lg:text-7xl"
+				>
+					¿Y si pudieras superar la infidelidad y recuperar la paz desde hoy mismo?
+				</h1>
+				<div class="grid md:grid-cols-2 md:gap-8">
+					<div>
+						<h2 class="text-xl text-primary-foreground md:text-2xl">
+							Se parte del único club con apoyo terapéutico para sanar tu corazon y...
+						</h2>
+
+						<div class="space-y-6 pt-4 md:pt-8">
+							<div
+								class="flex w-full items-center space-x-4 rounded-full bg-primary-foreground p-4"
+							>
+								<CircleCheck size="36" color="#099902" />
+								<p class="text-xl text-muted-foreground md:text-3xl">Calmar la ansiedad</p>
+							</div>
+							<div
+								class="flex w-full items-center space-x-4 rounded-full bg-primary-foreground p-4"
+							>
+								<CircleCheck size="36" color="#099902" />
+								<p class="text-xl text-muted-foreground md:text-3xl">Recuperar la autoestima</p>
+							</div>
+							<div
+								class="flex w-full items-center space-x-4 rounded-full bg-primary-foreground p-4"
+							>
+								<CircleCheck size="36" color="#099902" />
+								<p class="text-xl text-muted-foreground md:text-3xl">Dejar atras el pasado</p>
+							</div>
+							<div
+								class="flex w-full items-center space-x-4 rounded-full bg-primary-foreground p-4"
+							>
+								<CircleCheck size="36" color="#099902" />
+								<p class="text-xl text-muted-foreground md:text-3xl">
+									Liberarte de la ira y el rencor
+								</p>
+							</div>
+							<div
+								class="flex w-full items-center space-x-4 rounded-full bg-primary-foreground p-4"
+							>
+								<CircleCheck size="36" color="#099902" />
+								<p class="text-xl text-muted-foreground md:text-3xl">
+									Recuperar tu confianza y paz
+								</p>
+							</div>
+							<div class="flex w-full items-start space-x-4 rounded-full text-white">
+								<Heart size="36" fill="#CFC0FA" color="#CFC0FA" />
+								<p class="text-lg text-white md:text-2xl">
+									Y construir una nueva y mejor versión de ti misma/o
+								</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<Image
+							src={BereniceHero}
+							height={1317}
+							alt="Berenice Hero Worshop"
+							class="hidden md:block"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="mx-auto max-w-7xl px-4 md:px-0">
+				<div class="py-4 text-xl md:py-16 md:text-3xl">
+					<h1 class="text-center text-2xl md:text-5xl">
+						✨ Este club es para ti si sufriste una infidelidad y sientes que…
+					</h1>
+
+					<p class="py-4 text-center text-base leading-loose md:py-8 md:text-xl">
+						Estás cansada/o de cargar solo (a) con el dolor de la infidelidad. Tu mundo se derrumbó
+						y no sabes cómo volver a confiar. Tu mente no para de revivir lo que pasó, como una
+						película dolorosa. Tu autoestima se quebró y te preguntas: “¿Qué hice mal?” Vives entre
+						la rabia, la tristeza y el miedo a que vuelva a pasar. No sabes si perdonar, seguir o
+						soltar… pero quieres dejar de sufrir. Quieres recuperar tu confianza, autoestima y tu
+						paz interior. Deseas cerrar este ciclo de la mejor manera, con claridad y fortaleza.
+						Buscas una guía práctica, cálida y profesional que te acompañe paso a paso.
+					</p>
+				</div>
+
+				<h1
+					class="container mx-auto py-2 text-center text-5xl font-bold text-[#271647] sm:text-8xl md:py-4 lg:text-7xl"
+				>
+					¿Qué incluye tu subscripción al club?
+				</h1>
+				<div
+					class="my-4 grid place-items-center space-y-4 md:my-8 md:grid-cols-2 md:gap-12 md:space-y-0"
+				>
+					<div class="rounded-3xl bg-gradient-to-b from-[#271647] to-[#271647]/90 py-4 md:mx-32">
+						<Image src={Slide1} alt="slide" width={250} height={250} alt="logo 1" class="mx-auto" />
+						<p class="px-4 py-4 text-center text-xl uppercase text-primary-foreground md:text-4xl">
+							Taller
+						</p>
+						<div class="mx-4 h-1 bg-primary-foreground md:mx-8"></div>
+						<p class="px-4 py-4 text-center text-xl text-primary-foreground md:mx-4 md:text-2xl">
+							Estilo
+							<strong> terapia psicológica</strong>
+							 grupal cada mes, clase en vivo via Zoom
+						</p>
+					</div>
+					<div class="rounded-3xl bg-gradient-to-b from-[#271647] to-[#271647]/90 py-4 md:mx-32">
+						<Image src={Slide2} alt="slide" width={250} height={250} alt="logo 1" class="mx-auto" />
+						<p class="px-4 py-4 text-center text-xl uppercase text-primary-foreground md:text-4xl">
+							Manual
+						</p>
+						<div class="mx-4 h-1 bg-primary-foreground md:mx-8"></div>
+						<p class="px-4 py-4 text-center text-xl text-primary-foreground md:mx-4 md:text-2xl">
+							<strong>Ejercicios</strong>
+							 del taller PDF para imprimir, con herramientas de desarrollo personal
+						</p>
+					</div>
+
+					<div class="rounded-3xl bg-gradient-to-b from-[#271647] to-[#271647]/90 py-4 md:mx-32">
+						<MessageCircleMore size="200" class="mx-auto" color="#fff" stroke-width={1} />
+						<p class="px-4 py-4 text-center text-xl uppercase text-primary-foreground md:text-4xl">
+							Cafecito del desahogo
+						</p>
+						<div class="mx-4 h-1 bg-primary-foreground md:mx-8"></div>
+						<p class="px-4 py-4 text-center text-xl text-primary-foreground md:mx-4 md:text-2xl">
+							Una <strong> segunda sesión</strong>
+							 al mes de preguntas y respuestas, es un espacio para escucharte y aclarar tus dudas
+							en vivo via zoom
+						</p>
+					</div>
+					<div class="rounded-3xl bg-gradient-to-b from-[#271647] to-[#271647]/90 py-4 md:mx-32">
+						<Video size="200" class="mx-auto" color="#fff" class="mx-auto" stroke-width={1} />
+						<p class="px-4 py-4 text-center text-xl uppercase text-primary-foreground md:text-4xl">
+							Sesiones grabadas
+						</p>
+						<div class="mx-4 h-1 bg-primary-foreground md:mx-8"></div>
+						<p class="px-4 py-4 text-center text-xl text-primary-foreground md:mx-4 md:text-2xl">
+							Grabación disponible para ver la repetición, en caso que no puedas mirarlo en vivo via
+							zoom, <stron>asi no te pierdes el taller</stron>
+						</p>
+					</div>
+					<div class="rounded-3xl bg-gradient-to-b from-[#271647] to-[#271647]/90 py-4 md:mx-32">
+						<Users size="200" class="mx-auto" color="#fff" class="mx-auto" stroke-width={1} />
+						<p class="px-4 py-4 text-center text-xl uppercase text-primary-foreground md:text-4xl">
+							Comunidad
+						</p>
+						<div class="mx-4 h-1 bg-primary-foreground md:mx-8"></div>
+						<p
+							class="flex-1 px-4 py-4 text-center text-xl text-primary-foreground md:mx-4 md:text-2xl"
+						>
+							<strong>De contención psicológica y apoyo emocional</strong>
+							 Un espacio donde te sientas comprendido, acompañado y podrás compartir tus emociones,
+							liberandote de tus problemas.
+						</p>
+					</div>
+					<div class="rounded-3xl bg-gradient-to-b from-[#271647] to-[#271647]/90 py-4 md:mx-32">
+						<HandHeart size="200" class="mx-auto" color="#fff" class="mx-auto" stroke-width={1} />
+						<p
+							class="px-4 py-4 text-center text-xl uppercase text-primary-foreground md:my-8 md:text-4xl"
+						>
+							Soporte y ayuda
+						</p>
+						<div class="mx-4 h-1 bg-primary-foreground md:mx-8"></div>
+						<p
+							class="flex-1 px-4 py-4 text-center text-xl text-primary-foreground md:mx-4 md:text-2xl"
+						>
+							En un grupo de Whatsapp. Dentro del club también podrás hacer nuevos amigos y
+							networking con personas de otros países.
+						</p>
+					</div>
+				</div>
+				<h3 class="text-center text-xl font-semibold uppercase text-[#271647] md:text-4xl">
+					sana y supera la infidelidad, de la herida a la libertad emocional
+				</h3>
+				<h3 class="pb-4 text-center text-xl uppercase text-[#271647] md:pb-16 md:text-4xl">
+					(primera temporada)
+				</h3>
+			</div>
+		</section>
+		<section class="bg-[#271647] py-4 md:py-16">
+			<div class="mx-auto max-w-7xl px-4 md:px-0">
+				<h3 class="pb-4 text-center text-xl font-semibold text-white md:pb-8 md:text-4xl">
+					Tu subscripción incluye :
+				</h3>
+				<div class="grid gap-4">
+					{
+						[
+							{
+								title:
+									'Un workshop de 3 días en vivo por zoom, estilo taller interactivo, cada mes $40 dólares',
+								icon: '✅'
+							},
+							{ title: 'Recuperar tu autoestima', icon: '✅' },
+							{
+								title:
+									'Cuaderno terapéutico con ejercicios y herramientas de desarrollo personal, en formato PDF para imprimir $15 dólares. ',
+								icon: '✅'
+							},
+							{
+								title:
+									'Comunidad de contención psicológica y apoyo emocional, porque es un espacio donde te sientas comprendido, acompañado y podrás en esta comunidad compartir tus emociones, sentimientos, desahogarte, liberándote de tus problemas (💰 Invaluable es oro molido).',
+								icon: '✅'
+							},
+							{
+								title:
+									'Grabación disponible para ver la repetición del workshop, en caso que no puedas mirarlo en vivo vía zoom, así no te pierdes el taller $25 dólares.',
+								icon: '✅'
+							},
+							{
+								title: 'Servicio de soporte y ayuda para uso de la plataforma del club $10.',
+								icon: '✅'
+							}
+						].map((benefit) => (
+							<div class=" border-border group flex items-center space-x-4 rounded-lg border bg-card p-6 transition-all hover:border-primary-workshop/50 hover:shadow-lg">
+								<span class="text-4xl">{benefit.icon}</span>
+								<h3 class="text-lg font-semibold leading-relaxed text-card-foreground">
+									{benefit.title}
+								</h3>
+							</div>
+						))
+					}
+				</div>
+			</div>
+			<div class="mx-auto max-w-6xl pt-4 md:pt-8">
+				<div class="mb-12 text-center">
+					<h2 class="text-balance font-serif text-3xl font-bold text-white lg:text-4xl">
+						¡ Pero aún hay más ! BONOS de acción rápida
+					</h2>
+				</div>
+				<div class="grid gap-6 p-4 md:p-0 lg:grid-cols-2">
+					<div class="rounded-2xl border-2 border-primary-workshop bg-card p-8 shadow-lg">
+						<div
+							class="mb-4 inline-block rounded-full bg-primary-workshop px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary-foreground"
+						>
+							Solo los 10 primeros
+						</div>
+						<h3 class="mb-3 text-2xl font-bold text-card-foreground">
+							Sesión terapéutica individual de 45 minutos
+						</h3>
+						<p class="leading-relaxed text-muted-foreground">
+							Con Psicóloga Berenice Bastidas de 45 minutos. <span class="line-through">
+								60 dolares</span
+							>
+						</p>
+					</div>
+
+					<div class="rounded-2xl border-2 border-primary-workshop bg-card p-8 shadow-lg">
+						<div
+							class="mb-4 inline-block rounded-full bg-primary-workshop px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary-foreground"
+						>
+							Solo los 20 primeras
+						</div>
+						<h3 class="mb-3 text-2xl font-bold text-card-foreground">eBook guía fácil</h3>
+						<p class="leading-relaxed text-muted-foreground">
+							<stronng> ¡ Book guía fácil para afrontar la infedilidad !</stronng>
+							<span class="line-through"> 30 dolares</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="my-4 md:my-8">
+			<div class="mx-auto max-w-7xl">
+				<div class="flex justify-center p-4 md:p-0">
+					<CtaPrecio />
+				</div>
+			</div>
+			<div class="my-8 md:my-16">
+				<h2
+					class="text-balance py-2 text-center font-serif text-3xl font-bold text-primary-workshop md:py-4 lg:text-4xl"
+				>
+					¿ Que veremos en el workshop de Noviembre ?
+				</h2>
+				<div class="mx-auto max-w-4xl p-4 md:p-0">
+					<!-- Card wrapper that matches the tall rounded sheet design -->
+					<div class="mx-auto w-full rounded-2xl border-2 border-[#4b1f66] bg-white/5 p-6 md:p-8">
+						<!-- Module 1 -->
+						<div
+							class="to-white/2 mb-6 overflow-hidden rounded-xl bg-gradient-to-b from-white/0 shadow-sm"
+						>
+							<div class="bg-gradient-to-r from-[#3a0f4f] to-[#6b2f86] px-6 py-4">
+								<h3 class="text-lg font-semibold text-white md:text-2xl">
+									Módulo 1: Entendiendo el impacto de la infidelidad
+								</h3>
+							</div>
+							<ul class="space-y-4 px-6 py-6">
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										¿Por qué duele tanto? El trauma de la traición.
+									</p>
+								</li>
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										Tipos de infidelidad y su efecto en la pareja.
+									</p>
+								</li>
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										¿Qué pasa en el cerebro y el corazón tras una infidelidad?
+									</p>
+								</li>
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										Validando tus emociones: lo que sientes es normal.
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Module 2 -->
+						<div
+							class="to-white/2 mb-6 overflow-hidden rounded-xl bg-gradient-to-b from-white/0 shadow-sm"
+						>
+							<div class="bg-gradient-to-r from-[#3a0f4f] to-[#6b2f86] px-6 py-4">
+								<h3 class="text-lg font-semibold text-white md:text-2xl">
+									Módulo 2: El torbellino emocional
+								</h3>
+							</div>
+							<ul class="space-y-4 px-6 py-6">
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										Manejo del dolor, la rabia y la tristeza.
+									</p>
+								</li>
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										Cómo parar los pensamientos intrusivos y la obsesión.
+									</p>
+								</li>
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										El miedo a no ser suficiente: sanando la autoestima herida.
+									</p>
+								</li>
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										Ansiedad y desconfianza: cómo calmarlas día a día.
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Module 3 -->
+						<div
+							class="to-white/2 mb-0 overflow-hidden rounded-xl bg-gradient-to-b from-white/0 shadow-sm"
+						>
+							<div class="bg-gradient-to-r from-[#3a0f4f] to-[#6b2f86] px-6 py-4">
+								<h3 class="text-lg font-semibold text-white md:text-2xl">
+									Módulo 3: Decidir el camino
+								</h3>
+							</div>
+							<ul class="space-y-4 px-6 py-6">
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										¿Perdonar o soltar? Claves para tomar la mejor decisión.
+									</p>
+								</li>
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										Señales de que la relación puede sanar… o no.
+									</p>
+								</li>
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										Cómo hablar con tu pareja después de la infidelidad.
+									</p>
+								</li>
+								<li class="flex items-center gap-4">
+									<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+									<p class="text-muted-foreground sm:text-xl">
+										Poner límites sanos sin miedo a perder.
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="py-4 md:py-16">
+					<div class="mx-auto max-w-4xl">
+						<h2
+							class="text-balance py-2 text-center font-serif text-3xl font-bold text-primary-workshop md:py-4 lg:text-4xl"
+						>
+							¿Qué vas a lograr si perteneces al club?
+						</h2>
+						<ul class="space-y-4 px-6 py-6">
+							<li class="flex items-center gap-4">
+								<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+								<p class="text-muted-foreground sm:text-xl">
+									Dejar de obsesionarte con lo ocurrido y calmar tu ansiedad.
+								</p>
+							</li>
+							<li class="flex items-center gap-4">
+								<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+								<p class="text-muted-foreground sm:text-xl">
+									Recuperar tu autoestima y sentirte suficiente otra vez.
+								</p>
+							</li>
+							<li class="flex items-center gap-4">
+								<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+								<p class="text-muted-foreground sm:text-xl">
+									Tomar decisiones claras sobre tu relación (quedarte o soltar).
+								</p>
+							</li>
+							<li class="flex items-center gap-4">
+								<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+								<p class="text-muted-foreground sm:text-xl">
+									Sanar la confianza rota y aprender a poner límites sanos.
+								</p>
+							</li>
+							<li class="flex items-center gap-4">
+								<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+								<p class="text-muted-foreground sm:text-xl">
+									Liberarte del rencor y cerrar ciclos que hoy no te dejan avanzar.
+								</p>
+							</li>
+							<li class="flex items-center gap-4">
+								<span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#6b2f86]"></span>
+								<p class="text-muted-foreground sm:text-xl">
+									Reconectar contigo mismo/a y construir una nueva versión más fuerte.
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<section class="px-6 py-12">
+				<div class="mx-auto max-w-7xl px-4">
+					<div class="relative overflow-visible rounded-2xl border-4 border-[#7b3bff] bg-[#4a0d5a]">
+						<!-- Text area (full width on mobile, constrained on desktop so it wraps) -->
+						<div class="px-6 py-12 md:py-20 md:pl-16 md:pr-80">
+							<h2 class="mb-6 max-w-3xl text-3xl font-bold leading-tight text-white md:text-5xl">
+								¿Todavía tienes dudas?
+							</h2>
+							<p class="mb-8 max-w-xl text-lg leading-relaxed text-white/95 md:text-xl">
+								¡Es super normal! Siéntete libre de hablar con nuestro equipo a través de WhatsApp y
+								aprovecha para resolver todas tus dudas.
+							</p>
+							<a
+								href="https://wa.link/rq5328"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="inline-block rounded-md bg-green-600 px-6 py-3 text-sm font-bold uppercase text-white shadow-md md:text-base"
+							>
+								PIDE AYUDA A SOPORTE
+							</a>
+						</div>
+
+						<!-- Large decorative image: hidden on mobile, bigger on md+ and positioned bottom-right -->
+						<div
+							class="pointer-events-none absolute bottom-10 right-0 hidden translate-y-6 transform lg:block lg:translate-y-10"
+						>
+							<Image
+								src={BerePromo}
+								alt="Bere-Promo"
+								width={1200}
+								height={1400}
+								class="w-[520px] select-none md:w-[680px]"
+							/>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="my-4 md:my-16">
+						<h2
+							class="text-balance py-2 text-center font-serif text-3xl font-bold text-primary-workshop md:py-4 lg:text-4xl"
+						>
+							Preguntas Frecuentes
+						</h2>
+
+						<div class="mx-auto max-w-3xl space-y-4">
+							<AccordionPromo
+								title="¿Qué es exactamente la membresía del CLUB?"
+								details="Ahí tú perteneces a una comunidad de contención psicológica y apoyo emocional de forma grupal. Es una suscripción para sanar y superar traumas psicológicos. Dentro del club también podrás hacer nuevos amigos y networking con personas de otros países."
+							/>
+							<AccordionPromo
+								title="¿Puedo darme de baja cuando yo quiera?"
+								details="Para darte de baja es fácil, solo debes enviar la solicitud de baja por correo o mensaje de Whatsapp, colocando tu nombre completo, tu correo electrónico con el que realizaste tu pago de suscripción y tu número de whatsapp.psicologaberenicebastidas@gmail.com Whats App +52 (686) 234-9366"
+							/>
+							<AccordionPromo
+								title="¿Debería apuntarme el CLUB o ir directamente a terapia?"
+								details="Ambos formatos te serán de utilidad, puedes empezar con la que tu prefieras y te sientas más cómodo (a)."
+							/>
+							<AccordionPromo
+								title="¿Cuánto tiempo tengo que dedicarle al club?"
+								details="Aproximadamente 5 hora al mes"
+							/>
+							<AccordionPromo
+								title="¿Cuándo empieza el club?"
+								details="Inmediatamente en cuanto te inscribas, ya forma parte de el"
+							/>
+							<AccordionPromo
+								title="¿Cuánto tiempo dura el acceso al club?"
+								details="Tu eliges la cantidad de meses que quieras estar activo, recuerda que es una membresía suscripción mensual"
+							/>
+							<AccordionPromo
+								title="¿Me puedo inscribir en otro momento?"
+								details="Te recomiendo aproveches la promoción de este mes, quizá el precio suba en un futuro"
+							/>
+							<AccordionPromo
+								title="No tengo tarjetas ni de crédito, ni te debito, ¿Puedo pagar en efectivo?"
+								details="Si puedes pagar por transferencia o en tienda oxxo"
+							/>
+							<AccordionPromo
+								title="¿Qué ocurre cuando realice mi pago?"
+								details="Una vez realizado tu pago, revisa tu correo electrónico. Recibirás el enlace para la sala de zoom y el acceso al grupo de whats app de soporte y ayuda."
+							/>
+						</div>
+					</div>
+				</div>
+
+				{/* Benefits Grid */}
+
+				<script is:inline>
+					const mexicoUrl = 'https://buy.stripe.com/14A7sL7eJcq1cOl1Bbe7m0A'
+					const internationalUrl = 'https://buy.stripe.com/5kQ9AT42xgGh01zdjTe7m0z'
+
+					async function detectCountry() {
+						try {
+							const params = new URLSearchParams(location.search)
+							const override = params.get('country') || localStorage.getItem('debugCountry')
+							if (override) return String(override).toUpperCase()
+						} catch (e) {
+							/* ignore in SSR */
+						}
+
+						try {
+							const res = await fetch('https://ipapi.co/json/')
+							if (res.ok) {
+								const json = await res.json()
+
+								if (json && json.country) return String(json.country).toUpperCase()
+							}
+						} catch (err) {
+							/* fallback */
+						}
+
+						const lang = navigator.language || navigator.userLanguage || ''
+						if (lang.toLowerCase().includes('mx')) return 'MX'
+						return 'INTL'
+					}
+
+					document.addEventListener('DOMContentLoaded', () => {
+						document.querySelectorAll('.purchase-btn').forEach((btn) => {
+							btn.addEventListener('click', async (e) => {
+								e.preventDefault()
+								if (btn.disabled) return
+								btn.disabled = true
+
+								const country = await detectCountry()
+								const target = country === 'MX' ? mexicoUrl : internationalUrl
+
+								// optional: small delay to show disabled state
+								window.location.href = target
+							})
+						})
+					})
+				</script>
+			</section>
+		</section>
+	</div>
+</LayoutCurso>
