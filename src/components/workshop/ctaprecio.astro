@@ -113,33 +113,7 @@
 </div>
 
 <script is:inline>
-	const mexicoUrl = 'https://buy.stripe.com/14A7sL7eJcq1cOl1Bbe7m0A'
-	const internationalUrl = 'https://buy.stripe.com/5kQ9AT42xgGh01zdjTe7m0z'
-
-	async function detectCountry() {
-		try {
-			const params = new URLSearchParams(location.search)
-			const override = params.get('country') || localStorage.getItem('debugCountry')
-			if (override) return String(override).toUpperCase()
-		} catch (e) {
-			/* ignore in SSR */
-		}
-
-		try {
-			const res = await fetch('https://ipapi.co/json/')
-			if (res.ok) {
-				const json = await res.json()
-
-				if (json && json.country) return String(json.country).toUpperCase()
-			}
-		} catch (err) {
-			/* fallback */
-		}
-
-		const lang = navigator.language || navigator.userLanguage || ''
-		if (lang.toLowerCase().includes('mx')) return 'MX'
-		return 'INTL'
-	}
+	const stripeUrl = 'https://buy.stripe.com/28EdR92Yt61D29H2Ffe7m0B'
 
 	document.addEventListener('DOMContentLoaded', () => {
 		document.querySelectorAll('.purchase-btn').forEach((btn) => {
@@ -148,11 +122,8 @@
 				if (btn.disabled) return
 				btn.disabled = true
 
-				const country = await detectCountry()
-				const target = country === 'MX' ? mexicoUrl : internationalUrl
-
-				// optional: small delay to show disabled state
-				window.location.href = target
+				// Stripe will automatically detect the correct price based on country
+				window.location.href = stripeUrl
 			})
 		})
 	})
