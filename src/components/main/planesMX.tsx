@@ -4,7 +4,7 @@ import { User, Users } from 'lucide-react'
 
 const personalPlans = [
 	{
-		planName: 'Gestiona Tu Psicologia',
+		planName: 'Terapia Individual',
 		planLabel: 'Plan Lite',
 		price: '$800',
 		features: ['Una sesion individual de terapia'],
@@ -12,7 +12,7 @@ const personalPlans = [
 		checkoutUrl: 'https://buy.stripe.com/5kA16h5Kj4N90a4fZe'
 	},
 	{
-		planName: 'Gestiona Tu Psicologia',
+		planName: 'Terapia Individual',
 		planLabel: 'Plan Plus',
 		price: '$2,000',
 		features: [
@@ -24,7 +24,7 @@ const personalPlans = [
 		checkoutUrl: 'https://buy.stripe.com/9AQ2alb4DbbxbSM00k'
 	},
 	{
-		planName: 'Gestiona Tu Psicologia',
+		planName: 'Terapia Individual',
 		planLabel: 'Plan Total',
 		price: '$6,000',
 		features: [
