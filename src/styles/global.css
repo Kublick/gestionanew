@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #B3A7D9;
+  --color-secondary: #EAE6F4;
+  --color-accent: #6D8C82;
+  --color-whatsapp: #25d366;
+  --color-texto: #70648F;
+  --color-background: #FDFBFF;
+  --color-foreground: #0A0011;
+  --color-muted: #F2EAF6;
+  --color-muted-foreground: #6E5E78;
+  --color-accent-workshop: #B26AD9;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #1D0B29;
+  --color-primary-workshop: #570A74;
+  --color-primary-foreground: #FFFFFF;
+
+  --font-bebas: 'Bebas Neue', 'sans-serif';
+  --font-montserrat: 'Montserrat', 'serif';
+  --font-mitalic: 'Montserrat Italic', 'serif';
+  --font-poppins: 'Poppins', 'sans-serif';
+
+  --background-image-hero-image: url('/imagen_inicio.webp');
+  --background-image-sesion-image: url('/imagen_sesion.webp');
+}
