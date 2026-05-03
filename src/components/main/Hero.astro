@@ -10,54 +10,252 @@ import { whatsappLink } from '../../utils/contants'
 	.box {
 		box-shadow: 0px 14px 74.9px -25px rgba(0, 0, 0, 0.3);
 	}
+
+	/* Fade in animations */
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeInLeft {
+		from {
+			opacity: 0;
+			transform: translateX(-30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes fadeInRight {
+		from {
+			opacity: 0;
+			transform: translateX(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes pulse {
+		0%, 100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.05);
+		}
+	}
+
+	@keyframes float {
+		0%, 100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-10px);
+		}
+	}
+
+	.animate-fade-in-up {
+		animation: fadeInUp 0.8s ease-out forwards;
+	}
+
+	.animate-fade-in-left {
+		animation: fadeInLeft 0.8s ease-out forwards;
+	}
+
+	.animate-fade-in-right {
+		animation: fadeInRight 0.8s ease-out forwards;
+	}
+
+	.animate-pulse-slow {
+		animation: pulse 2s ease-in-out infinite;
+	}
+
+	.animate-float {
+		animation: float 3s ease-in-out infinite;
+	}
+
+	/* Delay classes */
+	.delay-100 {
+		animation-delay: 0.1s;
+		opacity: 0;
+	}
+	.delay-200 {
+		animation-delay: 0.2s;
+		opacity: 0;
+	}
+	.delay-300 {
+		animation-delay: 0.3s;
+		opacity: 0;
+	}
+	.delay-400 {
+		animation-delay: 0.4s;
+		opacity: 0;
+	}
+	.delay-500 {
+		animation-delay: 0.5s;
+		opacity: 0;
+	}
+	.delay-600 {
+		animation-delay: 0.6s;
+		opacity: 0;
+	}
+
+	/* Badge animation */
+	@keyframes badgePulse {
+		0%, 100% {
+			box-shadow: 0 0 0 0 rgba(201, 169, 98, 0.7);
+		}
+		50% {
+			box-shadow: 0 0 0 15px rgba(201, 169, 98, 0);
+		}
+	}
+
+	.free-badge {
+		animation: badgePulse 2s ease-in-out infinite;
+	}
+
+	/* CTA hover effects */
+	.cta-button {
+		transition: all 0.3s ease;
+	}
+
+	.cta-button:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	}
 </style>
 
 <section id="#" class="bg-hero-image bg-cover bg-center">
 	<div class="flex justify-center">
-		<Image src={LogoInicio} alt="Logo" widths={[111, 155]} class="my-[56px]" quality={'high'} />
+		<Image src={LogoInicio} alt="Logo" widths={[111, 155]} class="my-[56px] animate-fade-in-up" quality={'high'} />
 	</div>
 	<div
 		class="box mx-4 flex justify-center overflow-visible bg-white px-10 pt-10 md:relative md:mx-24 md:px-28 md:pt-0"
 	>
-		<div class="flex flex-col items-center gap-8 text-center md:flex-row md:space-x-4 md:text-left">
-			<div class="flex flex-col gap-8 md:w-1/2 md:gap-10 md:py-24">
-				<div class="text-2xl text-[#3C3C3C] md:text-5xl md:tracking-wider">
+		<div class="relative flex flex-col items-center gap-8 text-center md:flex-row md:space-x-4 md:text-left">
+			<div class="flex flex-col gap-6 md:w-1/2 md:gap-8 md:py-20">
+				<!-- Badge -->
+				<div class="free-badge inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#C9A962] to-[#E5D4A1] px-4 py-2 text-sm font-bold text-[#1A1A1A] animate-fade-in-up delay-100">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+						<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+					</svg>
+					SESIÓN INFORMATIVA ¡GRATIS!
+				</div>
+
+				<div class="text-2xl text-[#3C3C3C] md:text-5xl md:tracking-wider animate-fade-in-up delay-200">
 					<h1>¿QUIERES MANDAR</h1>
 					<h1>
 						TODO A LA <span class="text-primary">CH!@#$%?</span>
 					</h1>
 				</div>
-				<p class="text-sm leading-loose md:text-base">
-					En eso yo te puedo ayudar, esto te va a interesar hoy tengo para ti una sesión informativa
-					de terapia psicológica que te quiero regalar, solo debes enviarme un mensaje haciendo
+				
+				<p class="text-sm leading-loose md:text-base animate-fade-in-up delay-300">
+					En eso yo te puedo ayudar. Hoy tengo para ti una sesión informativa
+					de terapia psicológica que te quiero regalar. Solo debes enviarme un mensaje haciendo
 					click en este botón
 				</p>
-				<div class="mt-4">
+				
+				<!-- Enhanced CTA -->
+				<div class="mt-2 flex flex-col gap-4 animate-fade-in-up delay-400">
 					<a
 						href={whatsappLink}
-						class="mb-2 rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-purple-400 focus:outline-none focus:ring-4 focus:ring-purple-300 md:py-3 md:text-base"
+						class="cta-button group relative inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-primary to-[#6B8B7B] px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:from-[#4A7B6A] hover:to-primary hover:shadow-xl md:px-10 md:py-5"
 					>
-						¡Quiero mi sesión!
+						<span class="absolute -left-1 -top-1 h-3 w-3 rounded-full bg-yellow-400 opacity-0 transition-opacity group-hover:opacity-100"></span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" class="transition-transform group-hover:scale-110">
+							<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.162-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+						</svg>
+						¡Quiero mi sesión gratis!
+						<span class="ml-2 rounded-full bg-white/20 px-2 py-0.5 text-xs">15 min</span>
 					</a>
+					<p class="text-center text-xs text-gray-500 md:text-left">
+						<i class="fas fa-shield-alt mr-1"></i> Sin compromiso, sin costo
+					</p>
+				</div>
+
+				<!-- Trust indicators -->
+				<div class="mt-2 flex items-center gap-4 animate-fade-in-up delay-500">
+					<div class="flex items-center gap-2">
+						<div class="flex -space-x-2">
+							<div class="h-8 w-8 rounded-full border-2 border-white bg-green-500 flex items-center justify-center text-xs text-white">A</div>
+							<div class="h-8 w-8 rounded-full border-2 border-white bg-green-500 flex items-center justify-center text-xs text-white">M</div>
+							<div class="h-8 w-8 rounded-full border-2 border-white bg-green-500 flex items-center justify-center text-xs text-white">S</div>
+						</div>
+						<span class="text-xs text-gray-600">3 personas agendaron hoy</span>
+					</div>
 				</div>
 			</div>
+			
+			<!-- Image -->
 			<Image
 				src={ImagenBere}
 				alt="Bere"
 				widths={[215, 459]}
 				class="md:absolute md:bottom-0 md:right-20 md:-mt-20"
 			/>
+			<!-- Floating credential card -->
+			<div class="animate-float absolute -bottom-4 right-4 rounded-xl bg-white/95 p-4 shadow-xl backdrop-blur-sm md:bottom-0 md:right-36 md:-mb-8">
+				<div class="flex items-center gap-3">
+					<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+							<polyline points="22 4 12 14.01 9 11.01"/>
+						</svg>
+					</div>
+					<div>
+						<p class="text-xs text-gray-500">Licenciada en</p>
+						<p class="font-bold text-gray-800">Psicología</p>
+						<p class="text-xs text-primary">Cédula 7438424</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
-<div class="mx-[45px] flex flex-col items-center py-20 md:mx-auto md:w-3/4">
-	<h1 class="text-2xl uppercase tracking-wide text-[#2a2a2a] md:text-4xl">terapia psicológica</h1>
-	<div class="pb-10 pt-6">
+
+<!-- Benefits Section -->
+<div class="mx-[45px] flex flex-col items-center py-16 md:mx-auto md:w-3/4">
+	<h1 class="text-2xl uppercase tracking-wide text-[#2a2a2a] md:text-4xl animate-fade-in-up delay-200">terapia psicológica</h1>
+	<div class="pb-8 pt-6">
 		<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none">
 			<path d="M0 2H249" stroke="#B3A7D9" stroke-width="3"></path>
 		</svg>
 	</div>
-	<p class="max-w-4xl text-center text-sm tracking-tight md:text-base">
+
+	<!-- Benefits Grid -->
+	<div class="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+		<div class="flex flex-col items-center text-center animate-fade-in-up delay-300">
+			<div class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-3xl">🧠</div>
+			<h3 class="text-sm font-bold text-gray-800 md:text-base">Ansiedad</h3>
+			<p class="mt-1 text-xs text-gray-500">Aprende a manejarla</p>
+		</div>
+		<div class="flex flex-col items-center text-center animate-fade-in-up delay-400">
+			<div class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-3xl">😴</div>
+			<h3 class="text-sm font-bold text-gray-800 md:text-base">Sueño</h3>
+			<p class="mt-1 text-xs text-gray-500">Recupera tu descanso</p>
+		</div>
+		<div class="flex flex-col items-center text-center animate-fade-in-up delay-500">
+			<div class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-3xl">💑</div>
+			<h3 class="text-sm font-bold text-gray-800 md:text-base">Relaciones</h3>
+			<p class="mt-1 text-xs text-gray-500">Mejora tu conexión</p>
+		</div>
+		<div class="flex flex-col items-center text-center animate-fade-in-up delay-600">
+			<div class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-3xl">😊</div>
+			<h3 class="text-sm font-bold text-gray-800 md:text-base">Bienestar</h3>
+			<p class="mt-1 text-xs text-gray-500">Recupera tu alegría</p>
+		</div>
+	</div>
+
+	<p class="mt-10 max-w-4xl text-center text-sm tracking-tight md:text-base">
 		La terapia psicológica es un espacio para ti seguro y confiable donde puedes <span
 			class="font-mitalic text-lg text-primary"
 			>compartir tus pensamientos, emociones, sentimientos, situaciones o problemas.</span
@@ -67,4 +265,3 @@ import { whatsappLink } from '../../utils/contants'
 		solucionar tu circunstancia.
 	</p>
 </div>
-<!-- </div> -->

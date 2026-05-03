@@ -7,31 +7,73 @@ import PlanCard from '../../components/PlanCard.astro'
 import Footer from '../../components/Footer.astro'
 ---
 
-<Layout title="Planes Terapia Psicologica">
+<style>
+	@keyframes fadeInUp {
+		from { opacity: 0; transform: translateY(30px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+
+	.animate-in { animation: fadeInUp 0.6s ease-out both; }
+	.delay-100 { animation-delay: 0.1s; }
+	.delay-200 { animation-delay: 0.2s; }
+	.delay-300 { animation-delay: 0.3s; }
+	.delay-400 { animation-delay: 0.4s; }
+
+	.triangle-bottom { position: relative; }
+	.triangle-bottom::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-left: 50vw solid transparent;
+		border-right: 50vw solid transparent;
+		border-top: 75px solid white;
+	}
+</style>
+
+<Layout title="Planes Terapia Psicológica">
 	<Header />
 	<div class="pt-[56px] md:mt-[56px]">
-		<h1 class="mt-24 text-center text-2xl tracking-wide">Felicidades tu cita para terapia</h1>
-		<h1 class="text-center text-2xl tracking-wide">
-			psicológica está <span class="text-primary">reservada</span>
-		</h1>
-		<Image src={Logo} alt="logo" width={Logo.width} height={Logo.height} class="mx-auto py-24" />
-		<div class="mx-10 mb-8 text-center text-sm leading-[31px] text-black">
-			Estarías confirmando si te parece bien tu asistencia a la consulta, realizando el pago de la
-			misma, preferentemente el día de hoy o en el transcurso de la semana, antes del día de la cita
-			si pudieras por favor, para darte prioridad en la agenda y además así me estarías confirmado
-			que si asistirás a nuestra reunión y que no me dejaras plantada.
+		<!-- Hero -->
+		<div class="mx-auto max-w-2xl px-6 text-center animate-in delay-100">
+			<h1 class="mt-24 text-3xl tracking-wide md:text-4xl">
+				Felicidades, tu cita para terapia
+			</h1>
+			<h1 class="text-3xl tracking-wide md:text-4xl">
+				psicológica está <span class="text-primary">reservada</span>
+			</h1>
+		</div>
+
+		<Image src={Logo} alt="logo" width={Logo.width} height={Logo.height} class="mx-auto py-16 md:py-24" />
+
+		<div class="mx-auto max-w-xl px-6 text-center animate-in delay-200">
+			<div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="mx-auto mb-4 text-primary">
+					<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+					<path d="M12 16v-4M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+				</svg>
+				<p class="text-sm leading-relaxed text-gray-700">
+					Estarías confirmando tu asistencia a la consulta realizando el pago, preferentemente hoy o durante la semana, antes del día de la cita. Así me das prioridad en la agenda y confirmas que asistirás a nuestra reunión.
+				</p>
+			</div>
 		</div>
 	</div>
-	<div class="flex flex-col items-center bg-[#f2f2f2] py-2">
+
+	<!-- Plans Section -->
+	<div class="mt-16 flex flex-col items-center bg-[#f2f2f2] py-2">
 		<div class="triangle-bottom h-16"></div>
-		<h1 class="mt-8 text-center text-2xl tracking-wide">PLANES</h1>
-		<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none">
+		<h1 class="mt-10 text-center text-3xl tracking-wide animate-in delay-200">PLANES</h1>
+		<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none" class="animate-in delay-200">
 			<path d="M0 2H249" stroke="#B3A7D9" stroke-width="3"></path>
 		</svg>
-		<div class="my-8 text-center text-sm leading-normal text-black">
+		<p class="my-6 text-center text-sm text-gray-600 animate-in delay-200">
 			Puedes hacer el pago directamente aquí en la página web
-		</div>
-		<div class="flex flex-col gap-8 pb-8 md:flex-row md:gap-16 md:pb-48">
+		</p>
+
+		<div class="flex flex-col gap-8 px-6 pb-8 md:flex-row md:gap-16 md:pb-48">
 			<PlanCard
 				plan="(Plan Lite)"
 				price="$47 dlls"
@@ -55,22 +97,3 @@ import Footer from '../../components/Footer.astro'
 	</div>
 	<Footer />
 </Layout>
-
-<style>
-	.triangle-bottom {
-		position: relative;
-	}
-
-	.triangle-bottom::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 0;
-		height: 0;
-		border-left: 50vw solid transparent; /* Use viewport units to make the triangle responsive */
-		border-right: 50vw solid transparent; /* Use viewport units to make the triangle responsive */
-		border-top: 75px solid white;
-	}
-</style>

@@ -2,24 +2,49 @@
 const { plan, price, description, link, selected } = Astro.props
 ---
 
+<style>
+	@keyframes fadeInUp {
+		from { opacity: 0; transform: translateY(30px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+
+	.card-animate {
+		animation: fadeInUp 0.6s ease-out both;
+	}
+</style>
+
 <div
-	class="flex min-w-[300px] flex-col items-center justify-between bg-white p-7 py-12 shadow md:min-w-[453px]"
+	class={`card-animate flex min-w-[300px] flex-col items-center justify-between rounded-2xl border-2 p-8 py-12 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl md:min-w-[380px] ${
+		selected
+			? 'border-primary bg-white shadow-[0_0_30px_rgba(179,167,217,0.3)]'
+			: 'border-transparent bg-white'
+	}`}
+	style={`animation-delay: ${selected ? '0.3s' : '0.15s'}`}
 >
 	<div>
 		<div class="text-center">
-			<h2 class="text-xl font-medium">Gestiona Tu Psicología</h2>
-			<p class="text-xl text-accent">{plan}</p>
+			{selected && (
+				<div class="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary">
+					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+					RECOMENDADO
+				</div>
+			)}
+			<h2 class="text-lg font-medium text-gray-800">Gestión de Tu Psicología</h2>
+			<p class="text-primary">{plan}</p>
 		</div>
-		<h1 class="my-20 text-center text-2xl leading-3">{price}</h1>
-		<p class="text-primary">Incluye</p>
-		<ul>
+		<div class="my-16 text-center">
+			<span class="text-sm text-gray-500">{price.split(' ')[1]}</span>
+			<span class="block text-4xl font-bold text-gray-900">{price.split(' ')[0]}</span>
+		</div>
+		<p class="mb-4 text-sm font-semibold text-primary">Incluye</p>
+		<ul class="space-y-3">
 			{
 				description.map((item: String) => (
-					<li class="my-2 flex items-center  text-sm">
-						<svg xmlns="http://www.w3.org/2000/svg" width="67" height="67">
-							<circle cx="34" cy="34" r="3" fill="#B3A7D9" />
+					<li class="flex items-start gap-3 text-sm text-gray-700">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="mt-0.5 shrink-0">
+							<circle cx="12" cy="12" r="8" fill="#B3A7D9" opacity="0.3"/>
+							<circle cx="12" cy="12" r="4" fill="#B3A7D9"/>
 						</svg>
-
 						{item}
 					</li>
 				))
@@ -29,11 +54,14 @@ const { plan, price, description, link, selected } = Astro.props
 
 	<a
 		href={link}
-		class={`rounded-lg border-2 border-primary px-4 py-2 text-sm hover:bg-primary hover:text-white` +
-			(selected
-				? ' bg-primary text-white hover:border-primary hover:text-black hover:bg-primary/30'
-				: '')}
+		class={`mt-10 inline-flex items-center gap-2 rounded-xl px-8 py-3 text-sm font-semibold shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+			selected
+				? 'text-white hover:shadow-xl'
+				: 'border-2 border-primary text-primary hover:bg-primary hover:text-white'
+		}`}
+		style={selected ? { background: 'linear-gradient(to right, #9B8EC5, #8B7EC5)' } : undefined}
 	>
-		Elegir Plan</a
-	>
+		Elegir Plan
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+	</a>
 </div>

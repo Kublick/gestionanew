@@ -21,14 +21,15 @@ export function PricingCard({
 		<div
 			className={`relative flex flex-col rounded-2xl border p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
 				highlighted
-					? 'border-emerald-700 bg-emerald-800 text-stone-50 shadow-md'
+					? 'text-white shadow-md'
 					: 'border-stone-200 bg-white text-stone-800 shadow-sm'
 			}`}
+			style={highlighted ? { borderColor: '#8B7EC5', backgroundColor: '#8B7EC5' } : undefined}
 		>
 			{highlighted && (
 				<div className="absolute -top-3 left-1/2 -translate-x-1/2">
-					<span className="rounded-full bg-emerald-100 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-900">
-						Popular
+					<span className="rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+						Recomendado
 					</span>
 				</div>
 			)}
@@ -36,15 +37,16 @@ export function PricingCard({
 			<div className="mb-6">
 				<h3 className="text-lg font-semibold">{planName}</h3>
 				<p
-					className={`text-sm font-medium ${highlighted ? 'text-stone-50/70' : 'text-emerald-700'}`}
+					className={`text-sm font-medium ${highlighted ? 'text-white/70' : ''}`}
+					style={!highlighted ? { color: '#8B7EC5' } : undefined}
 				>
 					{planLabel}
 				</p>
 			</div>
 
 			<div className="mb-8">
-				<span className="font-serif text-4xl tracking-tight">{price}</span>
-				<span className={`ml-1 text-sm ${highlighted ? 'text-stone-50/60' : 'text-stone-500'}`}>
+				<span className={`font-serif text-4xl tracking-tight ${highlighted ? 'text-white' : 'text-stone-800'}`}>{price}</span>
+				<span className={`ml-1 text-sm ${highlighted ? 'text-white/60' : 'text-stone-500'}`}>
 					pesos
 				</span>
 			</div>
@@ -52,7 +54,7 @@ export function PricingCard({
 			<div className="mb-8 flex-1">
 				<p
 					className={`mb-4 text-xs font-semibold uppercase tracking-wider ${
-						highlighted ? 'text-stone-50/60' : 'text-stone-500'
+						highlighted ? 'text-white/60' : 'text-stone-500'
 					}`}
 				>
 					Incluye
@@ -62,7 +64,7 @@ export function PricingCard({
 						<li key={feature} className="flex items-start gap-3">
 							<Check
 								className={`mt-0.5 h-4 w-4 flex-shrink-0 ${
-									highlighted ? 'text-emerald-300' : 'text-emerald-700'
+									highlighted ? 'text-white' : 'text-primary'
 								}`}
 							/>
 							<span className="text-sm leading-relaxed">{feature}</span>
@@ -78,9 +80,10 @@ export function PricingCard({
 					rel="noopener noreferrer"
 					className={`inline-block w-full rounded-xl py-3 text-center text-sm font-semibold tracking-wide transition-all duration-200 ${
 						highlighted
-							? 'bg-stone-50 text-emerald-800 hover:bg-stone-100'
-							: 'bg-emerald-800 text-stone-50 hover:bg-emerald-700'
+							? 'bg-white hover:bg-stone-100'
+							: 'text-white hover:shadow-lg'
 					}`}
+					style={!highlighted ? { background: 'linear-gradient(to right, #9B8EC5, #8B7EC5)' } : { color: '#8B7EC5' }}
 				>
 					Elegir Plan
 				</a>
@@ -90,9 +93,10 @@ export function PricingCard({
 					type="button"
 					className={`w-full cursor-pointer rounded-xl py-3 text-sm font-semibold tracking-wide transition-all duration-200 ${
 						highlighted
-							? 'bg-stone-50 text-emerald-800 hover:bg-stone-100'
-							: 'bg-emerald-800 text-stone-50 hover:bg-emerald-700'
+							? 'bg-white hover:bg-stone-100'
+							: 'text-white hover:shadow-lg'
 					}`}
+					style={!highlighted ? { background: 'linear-gradient(to right, #9B8EC5, #8B7EC5)' } : { color: '#8B7EC5' }}
 				>
 					Elegir Plan
 				</button>

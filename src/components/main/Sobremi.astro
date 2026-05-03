@@ -4,18 +4,32 @@ import Berenice from '../../assets/imagen_2.png'
 import { whatsappLink } from '../../utils/contants'
 ---
 
+<style>
+	@keyframes fadeInUp {
+		from { opacity: 0; transform: translateY(30px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+
+	@keyframes fadeInLeft {
+		from { opacity: 0; transform: translateX(-30px); }
+		to { opacity: 1; transform: translateX(0); }
+	}
+
+	.animate-fade-up { animation: fadeInUp 0.6s ease-out forwards; }
+	.animate-fade-left { animation: fadeInLeft 0.6s ease-out forwards; }
+
+	.delay-100 { animation-delay: 0.1s; opacity: 0; }
+	.delay-200 { animation-delay: 0.2s; opacity: 0; }
+	.delay-300 { animation-delay: 0.3s; opacity: 0; }
+	.delay-400 { animation-delay: 0.4s; opacity: 0; }
+</style>
+
 <section id="sobremi" class="py-10">
 	<div class="flex flex-col items-center md:mx-auto md:flex-row md:justify-center">
-		<div class="px-10 md:w-1/2 md:px-20">
+		<div class="px-10 md:w-1/2 md:px-20 animate-fade-left delay-100">
 			<div>
 				<h1 class="mb-7 bg-white text-2xl tracking-wide md:text-5xl">SOBRE MI</h1>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="249"
-					height="4"
-					viewBox="0 0 249 4"
-					fill="none"
-				>
+				<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none">
 					<path d="M0 2H249" stroke="#B3A7D9" stroke-width="3"></path>
 				</svg>
 			</div>
@@ -53,22 +67,21 @@ import { whatsappLink } from '../../utils/contants'
 			alt="Berenice Bastidas"
 			height={Berenice.height}
 			width={Berenice.width}
-			class="hidden md:mb-12 md:block"
+			class="hidden md:mb-12 md:block animate-fade-up delay-200"
 		/>
 	</div>
-	<div class="bg-sesion-image bg-cover bg-center pb-6">
+
+	<div class="bg-sesion-image bg-cover bg-center pb-6 animate-fade-up delay-300">
 		<div class="text-center text-sm text-white">
-			<p
-				class="mx-8 py-12 text-sm font-semibold leading-5 md:mx-auto md:max-w-5xl md:py-24 md:text-4xl"
-			>
-				Agenda tu primera sesión informativa de terapia sin costo enviando un mensaje de Whats app
+			<p class="mx-8 py-12 text-sm font-semibold leading-5 md:mx-auto md:max-w-5xl md:py-24 md:text-4xl">
+				Agenda tu primera sesión informativa de terapia sin costo enviando un mensaje de WhatsApp
 				directamente en este botón
 			</p>
 
 			<a
 				href={whatsappLink}
 				target="_blank"
-				class="mx-auto rounded-xl bg-white px-8 py-2 font-semibold text-primary shadow-xl hover:bg-primary hover:text-white md:px-6 md:py-8 md:text-2xl"
+				class="mx-auto inline-block rounded-xl bg-white px-8 py-2 font-semibold text-primary shadow-xl transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-white md:px-6 md:py-8 md:text-2xl"
 				>Quiero agendar la sesión</a
 			>
 
