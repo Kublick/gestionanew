@@ -1,33 +1,26 @@
 ---
 import { AstroFont } from 'astro-font'
+import Seo from '../components/Seo.astro'
 
 interface Props {
 	title: string
 	description?: string
+	noindex?: boolean
 }
 
-const { title, description } = Astro.props
+const { title, description = 'Evento Libérate de la infidelidad y su dolor', noindex } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es-MX">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content={description ? description : 'Evento Liberate de la infidelidad y su dolor'}
-		/>
 		<meta name="viewport" content="width=device-width" />
+		<Seo title={title} description={description} noindex={noindex} />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 		<link rel="manifest" href="/site.webmanifest" />
-		<meta property="og:url" content="https://www.gestionatupsicologia.com/registro/" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content="Evento Liberate de la
-infidelidad y su dolor " />
-		<meta property="og:image" content="" />
 
 		<AstroFont
 			config={[
@@ -37,7 +30,7 @@ infidelidad y su dolor " />
 						{
 							style: 'normal',
 							weight: '400',
-							path: './public/fonts/BebasNeue-Regular.ttf'
+							path: './public/fonts/BebasNeue-Regular.woff2'
 						}
 					],
 					preload: true,
@@ -46,27 +39,14 @@ infidelidad y su dolor " />
 					fallback: 'sans-serif'
 				},
 				{
-					name: 'Montserrat',
-					src: [
-						{
-							style: 'normal',
-							path: './public/fonts/Montserrat-VariableFont_wght.ttf'
-						}
-					],
-					preload: true,
-					display: 'swap',
-					selector: 'body',
-					fallback: 'serif'
-				},
-				{
 					name: 'Montserrat Italic',
 					src: [
 						{
 							style: 'italic',
-							path: './public/fonts/Montserrat-Italic-VariableFont_wght.ttf'
+							path: './public/fonts/Montserrat-Italic-VariableFont_wght.woff2'
 						}
 					],
-					preload: true,
+					preload: false,
 					display: 'swap',
 					selector: 'h3',
 					fallback: 'serif'
@@ -77,17 +57,17 @@ infidelidad y su dolor " />
 						{
 							style: 'normal',
 							weight: '400',
-							path: './public/fonts/Poppins-Regular.ttf'
+							path: './public/fonts/Poppins-Regular.woff2'
 						},
 						{
 							style: 'normal',
 							weight: '600',
-							path: './public/fonts/Poppins-SemiBold.ttf'
+							path: './public/fonts/Poppins-SemiBold.woff2'
 						},
 						{
 							style: 'normal',
 							weight: '700',
-							path: './public/fonts/Poppins-Bold.ttf'
+							path: './public/fonts/Poppins-Bold.woff2'
 						}
 					],
 					preload: true,
@@ -98,10 +78,7 @@ infidelidad y su dolor " />
 			]}
 		/>
 
-		<link rel="preload" href="/imagen_inicio.webp" as="image" />
-		<link rel="preload" href="/imagen_sesion.webp" as="image" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
 	</head>
 	<body>
 		<!-- Google Tag Manager (noscript) -->
