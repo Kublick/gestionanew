@@ -1,5 +1,6 @@
 ---
 import Accordion from '../Accordion.astro'
+import { faqs } from '../../utils/contants'
 import ImagePreguntas from '../../assets/imagen_3.png'
 import { Image } from 'astro:assets'
 import fondo from '../../assets/fondo_2.png'
@@ -25,47 +26,28 @@ import fondoLarge from '../../assets/banner_lg.png'
 <section id="preguntas" class="py-10">
 	<div class="md:grid md:grid-cols-2 md:items-center md:justify-center">
 		<div class="mb-10 flex flex-col items-center md:order-2 md:justify-center">
-			<h1 class="mb-7 bg-white text-center text-2xl tracking-wide md:text-5xl animate-in delay-1">
+			<h2 class="heading mb-7 bg-white text-center text-2xl tracking-wide md:text-5xl animate-in delay-1">
 				PREGUNTAS FRECUENTES
-			</h1>
+			</h2>
 			<svg xmlns="http://www.w3.org/2000/svg" width="249" height="4" viewBox="0 0 249 4" fill="none" class="animate-in delay-1">
 				<path d="M0 2H249" stroke="#6D8C82" stroke-width="3"></path>
 			</svg>
 
 			<div class="mx-10 mt-7 flex flex-col gap-4 animate-in delay-2">
-				<Accordion
-					title="¿La terapia es para los locos?"
-					details="La terapia psicológica se recomienda para personas que están pasando por una o varias situaciones que perciben como negativas, que ya intentaron quizás hasta resolverla ellos mismos una y otra vez sin obtener éxito. Las personas que toman terapia tienen la sensatez consciente o inconsciente de acudir a un profesional para pedir ayudar."
-				/>
-				<Accordion
-					title="¿Cuánto dura una sesión?"
-					details="Las sesiones de terapia duran aproximadamente 50 minutos. La frecuencia recomendada es semanal, pero puede ajustarse según tus necesidades y objetivos terapéuticos."
-				/>
-				<Accordion
-					title="¿Es online o presencial?"
-					details="Ambas modalidades están disponibles. Puedes elegir la atención presencial en mi consultorio en Mexicali, o sesiones por videollamada desde la comodidad de tu hogar."
-				/>
-				<Accordion
-					title="¿Qué pasa en la primera sesión?"
-					details="La primera sesión es informativa y sin costo. Dura aproximadamente 15 minutos por WhatsApp. Me cuentas brevemente tu situación, te escucho y te explico cómo puedo ayudarte. No hay compromiso de continuar."
-				/>
-				<Accordion
-					title="¿Cómo agendo una cita?"
-					details="Es muy sencillo. Solo envía un mensaje al +52 (686) 234-9366 por WhatsApp y coordinamos la sesión informativa gratuita. Te responderé personalmente."
-				/>
+				{faqs.map((faq) => <Accordion title={faq.question} details={faq.answer} />)}
 			</div>
 		</div>
 		<div class="my-10 md:order-1">
 			<Image
 				src={ImagePreguntas}
-				alt="Berenice"
+				alt="Psicóloga Berenice Bastidas"
 				height={323}
 				width={247}
 				class="mx-auto md:hidden"
 			/>
 			<Image
 				src={ImagePreguntas}
-				alt="Berenice"
+				alt="Psicóloga Berenice Bastidas"
 				height={574}
 				width={438}
 				class="mx-auto hidden md:block"
@@ -74,11 +56,11 @@ import fondoLarge from '../../assets/banner_lg.png'
 	</div>
 
 	<div class="relative flex items-center justify-center animate-in delay-3">
-		<Image src={fondo} alt="Banner Logo" height={144} width={327} class="md:hidden" />
-		<Image src={fondoLarge} alt="Banner Logo" height={294} width={1200} class="hidden md:block" />
+		<Image src={fondo} alt="" height={144} width={327} class="md:hidden" />
+		<Image src={fondoLarge} alt="" height={294} width={1200} class="hidden md:block" />
 
 		<div class="absolute text-center text-white">
-			<h1 class="text-2xl leading-[6.50px] md:text-5xl">¡Tú ya eres éxito!</h1>
+			<p class="heading text-2xl leading-[6.50px] md:text-5xl">¡Tú ya eres éxito!</p>
 			<p class="mt-4 text-sm md:text-4xl">solo hagamos que se manifieste</p>
 		</div>
 	</div>

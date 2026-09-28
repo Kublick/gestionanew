@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.gestionatupsicologia.com/sitemap-index.xml

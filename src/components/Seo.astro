@@ -1,0 +1,27 @@
+---
+import { getImage } from 'astro:assets'
+import ogSource from '../assets/berenice_terapeuta_desktop.png'
+
+interface Props {
+	title: string
+	description: string
+	noindex?: boolean
+}
+
+const { title, description, noindex = false } = Astro.props
+const canonical = new URL(Astro.url.pathname, Astro.site)
+const ogImage = new URL((await getImage({ src: ogSource, format: 'png' })).src, Astro.site)
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+{noindex && <meta name="robots" content="noindex" />}
+<link rel="canonical" href={canonical} />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_MX" />
+<meta property="og:site_name" content="Gestiona tu Psicología" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImage} />
+<meta name="twitter:card" content="summary_large_image" />

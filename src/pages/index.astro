@@ -8,6 +8,52 @@ import Testimonios from '../components/main/Testimonios.astro'
 import Preguntas from '../components/main/Preguntas.astro'
 import Ebook from '../components/main/Ebook.astro'
 import Contacto from '../components/main/Contacto.astro'
+import { getImage } from 'astro:assets'
+import photo from '../assets/berenice_terapeuta_desktop.png'
+import { faqs } from '../utils/contants'
+
+const site = Astro.site!.href
+const schema = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Psychologist',
+		name: 'Psicóloga Berenice Bastidas – Gestiona tu Psicología',
+		url: site,
+		image: new URL((await getImage({ src: photo, format: 'png' })).src, site).href,
+		telephone: '+52-686-234-9366',
+		email: 'psicologaberenicebastidas@gmail.com',
+		address: {
+			'@type': 'PostalAddress',
+			addressLocality: 'Mexicali',
+			addressRegion: 'Baja California',
+			addressCountry: 'MX'
+		},
+		openingHoursSpecification: [
+			{
+				'@type': 'OpeningHoursSpecification',
+				dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+				opens: '10:00',
+				closes: '19:00'
+			},
+			{ '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '10:00', closes: '13:00' }
+		],
+		areaServed: 'Mexicali',
+		sameAs: [
+			'https://www.facebook.com/draberenicebastida',
+			'https://www.facebook.com/psicologabastidas',
+			'https://www.instagram.com/psicologabastidas/'
+		]
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: faqs.map((faq) => ({
+			'@type': 'Question',
+			name: faq.question,
+			acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+		}))
+	}
+]
 ---
 
 <!-- <script>
@@ -19,7 +65,9 @@ import Contacto from '../components/main/Contacto.astro'
 		window.open('https://buy.stripe.com/4gwbKVgoX0wTcWQeUY', '_blank')
 	})
 </script> -->
-<Layout title="Terapia Psicologica">
+<Layout title="Psicóloga en Mexicali | Terapia de Ansiedad, Pareja y Online – Berenice Bastidas">
+	<link slot="head" rel="preload" href="/imagen_inicio.webp" as="image" />
+	<script slot="head" type="application/ld+json" set:html={JSON.stringify(schema)} />
 	<main class="overflow-visible">
 		<Header />
 		<div class="pt-[56px] md:mt-[56px]">
